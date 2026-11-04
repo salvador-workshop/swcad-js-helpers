@@ -1,0 +1,29 @@
+{
+  "name": "swcad-js-helpers",
+  "version": "0.0.1-alpha.0",
+  "description": "...",
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "dist/swcad.min.js",
+  "scripts": {
+    "docs": "jsdoc packages -r -d docs -c jsdoc.json --readme readme.md",
+    "build": "node esbuild.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvador-workshop/swcad-js.git"
+  },
+  "keywords": [
+    "openjscad",
+    "jscad",
+    "code-cad",
+    "codecad"
+  ],
+  "author": "R. J. Salvador <salvador.workshop@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.28.0",
+    "jsdoc": "^4.0.4"
+  }
+}

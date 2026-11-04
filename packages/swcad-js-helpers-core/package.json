@@ -1,0 +1,39 @@
+{
+  "name": "swcad-js-helpers-core",
+  "version": "0.0.1-alpha.0",
+  "description": "swcad-js-helpers-core",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvador-workshop/sw-jscad.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "docs": "jsdoc src -r -d docs -c jsdoc.json --readme readme.md",
+    "test": "npx gulp"
+  },
+  "contributors": [
+    {
+      "name": "R. J. Salvador",
+      "url": "http://rj-salvador.com"
+    }
+  ],
+  "keywords": [
+    "openjscad",
+    "jscad"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "swcad-js-calcs": "*",
+    "swcad-js-component-spec": "*",
+    "swcad-js-components": "*",
+    "swcad-js-data": "*",
+    "swcad-js-models": "*",
+    "swcad-js-profile-spec": "*",
+    "swcad-js-profiles": "*",
+    "swcad-js-utils": "*"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.4"
+  }
+}

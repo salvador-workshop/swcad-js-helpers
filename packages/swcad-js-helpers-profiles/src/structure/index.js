@@ -1,0 +1,18 @@
+"use strict"
+
+/**
+ * ...
+ * @memberof profiles
+ * @namespace structure
+ */
+
+const structureInit = ({ jscad, swcadJs }) => {
+    const structure = {
+        foil: require('./foils-2d').init({ jscad, swcadJs }),
+        arch: require('./arch-2d').init({ jscad, swcadJs }),
+    }
+
+    return structure
+}
+
+module.exports = { init: structureInit };
