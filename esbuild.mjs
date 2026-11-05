@@ -5,7 +5,7 @@ import * as esbuild from 'esbuild'
 await esbuild.buildSync({
   entryPoints: ['src/index.js'],
   bundle: true,
-  outfile: 'dist/swcad.js',
+  outfile: 'dist/swcad-helpers.js',
   target: 'es2020',
   format: 'cjs',
 })
@@ -14,7 +14,7 @@ await esbuild.buildSync({
   entryPoints: ['src/index.js'],
   bundle: true,
   minify: true,
-  outfile: 'dist/swcad.min.js',
+  outfile: 'dist/swcad-helpers.min.js',
   target: 'es2020',
   format: 'cjs',
 })
@@ -25,7 +25,7 @@ await esbuild.buildSync({
 await esbuild.buildSync({
   entryPoints: ['src/debug.js'],
   bundle: true,
-  outfile: 'dist/swcad.debug.js',
+  outfile: 'dist/swcad-helpers.debug.js',
   target: 'es2020',
   format: 'cjs',
 })
@@ -34,7 +34,7 @@ await esbuild.buildSync({
   entryPoints: ['src/debug.js'],
   bundle: true,
   minify: true,
-  outfile: 'dist/swcad.debug.min.js',
+  outfile: 'dist/swcad-helpers.debug.min.js',
   target: 'es2020',
   format: 'cjs',
 })
