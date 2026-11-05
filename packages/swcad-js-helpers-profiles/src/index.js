@@ -1,9 +1,10 @@
 "use strict"
 
+const archModule = require('./arch')
 const curveModule = require('./curve')
-const rectFrameModule = require('./shapes/rectangle/frame-rect')
+const foilModule = require('./foil')
+const rectFrameModule = require('./rect-frame')
 const shapesModule = require('./shapes')
-const structureModule = require('./structure')
 
 const profilesInit = ({ jscad, swcadJs }) => {
     const shapesCore = shapesModule.init({ jscad, swcadJs })
@@ -34,9 +35,10 @@ const profilesInit = ({ jscad, swcadJs }) => {
     }
 
     return {
-        shapes,
+        arch: archModule.init({ jscad, swcadJs: preLib }),
         curve,
-        structure: structureModule.init({ jscad, swcadJs: preLib }),
+        foil: foilModule.init({ jscad, swcadJs: preLib }),
+        shapes,
     }
 }
 

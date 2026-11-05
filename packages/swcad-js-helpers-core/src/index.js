@@ -8,7 +8,7 @@ const coreInit = ({ jscad }) => {
     const swcadJsHelpersCore = {
         calcs: null,
         components: null,
-        data: require('swcad-js-data').init({ jscad }),
+        data: require('swcad-js-helpers-data').init({ jscad }),
         profiles: null,
         utils: null,
     }
@@ -19,16 +19,16 @@ const coreInit = ({ jscad }) => {
      * */
     let swcadJsHelpersAssembly = swcadJsHelpersCore
 
-    const assemblyCalcs = require('swcad-js-calcs').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    const assemblyCalcs = require('swcad-js-helpers-calcs').init({ jscad, swcadJs: swcadJsHelpersAssembly })
     swcadJsHelpersAssembly.calcs = assemblyCalcs
 
-    const assemblyComponents = require('swcad-js-components').init({ jscad, swcadJs: swcadJsHelpersAssembly })
-    swcadJsHelpersAssembly.components = assemblyComponents
-
-    const assemblyProfiles = require('swcad-js-profiles').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    const assemblyProfiles = require('swcad-js-helpers-profiles').init({ jscad, swcadJs: swcadJsHelpersAssembly })
     swcadJsHelpersAssembly.profiles = assemblyProfiles
 
-    const assemblyUtils = require('swcad-js-utils').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    const assemblyComponents = require('swcad-js-helpers-components').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    swcadJsHelpersAssembly.components = assemblyComponents
+
+    const assemblyUtils = require('swcad-js-helpers-utils').init({ jscad, swcadJs: swcadJsHelpersAssembly })
     swcadJsHelpersAssembly.utils = assemblyUtils
 
 
