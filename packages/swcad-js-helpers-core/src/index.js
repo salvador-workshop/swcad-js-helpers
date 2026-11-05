@@ -5,60 +5,45 @@ const coreInit = ({ jscad }) => {
     /**
      * First step to building the library
      * */
-    const swcadJsCore = {
-        data: require('swcad-js-data').init({ jscad }),
+    const swcadJsHelpersCore = {
         calcs: null,
-        profiles: null,
-        profileSpec: null,
         components: null,
-        componentSpec: null,
+        data: require('swcad-js-data').init({ jscad }),
+        profiles: null,
         utils: null,
-        models: null,
     }
 
 
     /**
      * Intermediate step to building the library
      * */
-    let swcadJsAssembly = swcadJsCore
+    let swcadJsHelpersAssembly = swcadJsHelpersCore
 
-    const assemblyCalcs = require('swcad-js-calcs').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.calcs = assemblyCalcs
+    const assemblyCalcs = require('swcad-js-calcs').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    swcadJsHelpersAssembly.calcs = assemblyCalcs
 
-    const assemblyProfiles = require('swcad-js-profiles').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.profiles = assemblyProfiles
+    const assemblyComponents = require('swcad-js-components').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    swcadJsHelpersAssembly.components = assemblyComponents
 
-    const assemblyProfileSpec = require('swcad-js-profile-spec').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.profileSpec = assemblyProfileSpec
+    const assemblyProfiles = require('swcad-js-profiles').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    swcadJsHelpersAssembly.profiles = assemblyProfiles
 
-    const assemblyComponents = require('swcad-js-components').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.components = assemblyComponents
-
-    const assemblyComponentSpec = require('swcad-js-component-spec').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.componentSpec = assemblyComponentSpec
-
-    const assemblyUtils = require('swcad-js-utils').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.utils = assemblyUtils
-
-    const assemblyModels = require('swcad-js-models').init({ jscad, swcadJs: swcadJsAssembly })
-    swcadJsAssembly.models = assemblyModels
+    const assemblyUtils = require('swcad-js-utils').init({ jscad, swcadJs: swcadJsHelpersAssembly })
+    swcadJsHelpersAssembly.utils = assemblyUtils
 
 
     /**
      * User-facing library
      * */
-    const swcadJs = {
-        data: swcadJsAssembly.data,
-        calcs: swcadJsAssembly.calcs,
-        profiles: swcadJsAssembly.profiles,
-        profileSpec: swcadJsAssembly.profileSpec,
-        components: swcadJsAssembly.components,
-        componentSpec: swcadJsAssembly.componentSpec,
-        utils: swcadJsAssembly.utils,
-        models: swcadJsAssembly.models,
+    const swcadJsHelpers = {
+        calcs: swcadJsHelpersAssembly.calcs,
+        components: swcadJsHelpersAssembly.components,
+        data: swcadJsHelpersAssembly.data,
+        profiles: swcadJsHelpersAssembly.profiles,
+        utils: swcadJsHelpersAssembly.utils,
     }
 
-    return swcadJs
+    return swcadJsHelpers
 }
 
 module.exports = {

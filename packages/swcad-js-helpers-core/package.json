@@ -1,6 +1,6 @@
 {
   "name": "swcad-js-helpers-core",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.4",
   "description": "swcad-js-helpers-core",
   "homepage": "",
   "repository": {
@@ -24,14 +24,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "swcad-js-calcs": "*",
-    "swcad-js-component-spec": "*",
-    "swcad-js-components": "*",
-    "swcad-js-data": "*",
-    "swcad-js-models": "*",
-    "swcad-js-profile-spec": "*",
-    "swcad-js-profiles": "*",
-    "swcad-js-utils": "*"
+    "swcad-js-helpers-calcs": "*",
+    "swcad-js-helpers-components": "*",
+    "swcad-js-helpers-data": "*",
+    "swcad-js-helpers-profiles": "*",
+    "swcad-js-helpers-utils": "*"
   },
   "devDependencies": {
     "jsdoc": "^4.0.4"
