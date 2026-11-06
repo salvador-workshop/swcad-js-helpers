@@ -5,7 +5,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "main": "dist/swcad.min.js",
+  "main": "dist/swcad-helpers.min.js",
   "scripts": {
     "docs": "jsdoc packages -r -d docs -c jsdoc.json --readme readme.md",
     "build": "node esbuild.mjs"
