@@ -86,7 +86,7 @@
 <h3>calcs.geometry.triangle</h3>
 <p>Geometric calculations for triangles.</p>
 <h4>rightTriangleOpts(opts)</h4>
-<p>Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for <code>jscad.primitives.triangle()</code>. If invalid, returns <code>null</code></p>
+<p>Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for <code>jscad.primitives.triangle()</code>. If invalid, returns <code>null</code>.</p>
 <hr>
 <br/>
 <h3>PROFILES</h3>
@@ -95,43 +95,113 @@
 <h3>profiles.arch</h3>
 <p>Modelling functions for 2D arches.</p>
 <h4>onePtArch(opts)</h4>
-<p>Builds a one-centre (semicircular) arch.</p>
+<p>Generates a one-centre (semicircular) arch.</p>
 <h4>twoPtArch(opts)</h4>
-<p>Builds a two-centre pointed arch.</p>
+<p>Generates a two-centre pointed arch.</p>
 <hr>
 <h3>profiles.curve</h3>
 <p>Modelling functions for curves.</p>
 <hr>
+<h3>profiles.curve.rightCorner</h3>
+<p>Modelling functions for right-angle corner curves.</p>
+<h4>bronze(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to the Bronze ratio.</p>
+<h4>copper(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to the Copper ratio.</p>
+<h4>golden(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to the Golden ratio.</p>
+<h4>plastic(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to the Plastic ratio.</p>
+<h4>silver(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to the Silver ratio.</p>
+<h4>sixtyThirty(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to a 30-degree right triangle's sides.</p>
+<h4>superGolden(opts)</h4>
+<p>Generates a right-angle corner curve with axis lengths corresponding to the Super-golden ratio.</p>
+<hr>
 <h3>profiles.foil</h3>
 <p>Modelling functions for 2D &quot;foils&quot; (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc.</p>
 <h4>cinquefoil(opts)</h4>
-<p>Builds a cinquefoil outline.</p>
+<p>Generates a cinquefoil outline.</p>
 <h4>octofoil(opts)</h4>
-<p>Builds an octofoil outline.</p>
+<p>Generates an octofoil outline.</p>
 <h4>quatrefoil(opts)</h4>
-<p>Builds a quatrefoil outline.</p>
+<p>Generates a quatrefoil outline.</p>
 <h4>sexfoil(opts)</h4>
-<p>Builds a sexfoil outline.</p>
+<p>Generates a sexfoil outline.</p>
 <h4>trefoil(opts)</h4>
-<p>Builds a trefoil outline.</p>
+<p>Generates a trefoil outline.</p>
 <hr>
 <h3>profiles.rectFrame</h3>
 <p>Modelling functions for rectangular frames with various corner options.</p>
+<h4>rectangularFrame(opts)</h4>
+<p>Generates a rectangular frame with the given corner options (interior and exterior).</p>
 <hr>
 <h3>profiles.shapes</h3>
 <p>Modelling functions for various basic shapes.</p>
 <hr>
+<h3>profiles.shapes.polygons</h3>
+<p>Modelling functions for various polygons.</p>
+<h4>octFromDiam(opts)</h4>
+<p>Generates an octagon from a given diametre.</p>
+<hr>
 <h3>profiles.shapes.ellipse</h3>
 <p>Modelling functions for various ellipses.</p>
+<h4>bronze(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to the Bronze ratio.</p>
+<h4>copper(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to the Copper ratio.</p>
+<h4>golden(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to the Golden ratio.</p>
+<h4>plastic(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to the Plastic ratio.</p>
+<h4>silver(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to the Silver ratio.</p>
+<h4>sixtyThirty(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to a 30-degree right triangle's sides.</p>
+<h4>superGolden(opts)</h4>
+<p>Generates an ellipse with axis lengths corresponding to the Super-golden ratio.</p>
 <hr>
 <h3>profiles.shapes.rectangle</h3>
 <p>Modelling functions for various rectangles.</p>
+<h4>bronze(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to the Bronze ratio.</p>
+<h4>copper(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to the Copper ratio.</p>
+<h4>golden(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to the Golden ratio.</p>
+<h4>plastic(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to the Plastic ratio.</p>
+<h4>silver(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to the Silver ratio.</p>
+<h4>sixtyThirty(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to a 30-degree right triangle's sides.</p>
+<h4>superGolden(opts)</h4>
+<p>Generates a rectangle with side lengths corresponding to the Super-golden ratio.</p>
 <hr>
 <h3>profiles.shapes.square</h3>
 <p>Modelling functions for various squares.</p>
+<h4>cornerCircNotch(opts)</h4>
+<p>Square with circular notches at corners.</p>
+<h4>cornerCircles(opts)</h4>
+<p>Square with circles at corners.</p>
 <hr>
 <h3>profiles.shapes.triangle</h3>
 <p>Modelling functions for various triangles.</p>
+<h4>equilateral(opts)</h4>
+<p>Generates an equilateral triangle.</p>
+<h4>right30(opts)</h4>
+<p>Generates a right triangle with a 30-degree angle.</p>
+<h4>right45(opts)</h4>
+<p>Generates a right triangle with a 45-degree angle.</p>
+<h4>rightBronze(opts)</h4>
+<p>Generates a right triangle with side lengths corresponding to the Bronze ratio.</p>
+<h4>rightCopper(opts)</h4>
+<p>Generates a right triangle with side lengths corresponding to the Copper ratio.</p>
+<h4>rightGolden(opts)</h4>
+<p>Generates a right triangle with side lengths corresponding to the Golden ratio.</p>
+<h4>rightSilver(opts)</h4>
+<p>Generates a right triangle with side lengths corresponding to the Silver ratio.</p>
 <hr>
 <br/>
 <h3>COMPONENTS</h3>
@@ -140,37 +210,45 @@
 <h3>components.arch</h3>
 <p>Modelling functions for 3D arches. Input 2D profiles must be centred at [0, 0, 0].</p>
 <h4>onePtArch(opts, geomProfile)</h4>
-<p>Builds a one-centre (semicircular) arch using a given 2d cross-section profile.</p>
+<p>Generates a one-centre (semicircular) arch using a given 2d cross-section profile.</p>
 <h4>twoPtArch(opts, geomProfile)</h4>
-<p>Builds a two-centre pointed arch using a given 2d cross-section profile.</p>
+<p>Generates a two-centre pointed arch using a given 2d cross-section profile.</p>
 <hr>
 <h3>components.foil</h3>
 <p>Modelling functions for 3D &quot;foils&quot; (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc. Input 2D profiles must be centred at [0, 0, 0].</p>
 <h4>cinquefoil(opts, geomProfile)</h4>
-<p>Builds a cinquefoil opening using a given 2d cross-section profile.</p>
+<p>Generates a cinquefoil opening using a given 2d cross-section profile.</p>
 <h4>octofoil(opts, geomProfile)</h4>
-<p>Builds an octofoil opening using a given 2d cross-section profile.</p>
+<p>Generates an octofoil opening using a given 2d cross-section profile.</p>
 <h4>quatrefoil(opts, geomProfile)</h4>
-<p>Builds a quatrefoil opening using a given 2d cross-section profile.</p>
+<p>Generates a quatrefoil opening using a given 2d cross-section profile.</p>
 <h4>sexfoil(opts, geomProfile)</h4>
-<p>Builds a sexfoil opening using a given 2d cross-section profile.</p>
+<p>Generates a sexfoil opening using a given 2d cross-section profile.</p>
 <h4>trefoil(opts, geomProfile)</h4>
-<p>Builds a trefoil opening using a given 2d cross-section profile.</p>
+<p>Generates a trefoil opening using a given 2d cross-section profile.</p>
 <hr>
 <br/>
 <h3>UTILS</h3>
 <p>Various utility helpers, mainly for the final modelling output.</p>
 <hr>
 <h3>utils.colors</h3>
-<p>A set of named colour presets and their translucent versions. Original color palette from Material Design (<code>https://www.google.com/design/spec/style/color.html</code>)</p>
+<p>A set of named colour presets and their translucent versions. References color palette from Material Design (<code>https://www.google.com/design/spec/style/color.html</code>)</p>
 <hr>
 <h3>utils.layout</h3>
 <p>Utilities for arranging sets of 2D/3D geometries into various layouts, with additional options for rendering text labels and descriptions.</p>
 <h4>addToLayout(opts, geom)</h4>
-<p>Adds element to layout</p>
+<p>Adds element to the layout.</p>
+<h4>clearLayout(opts)</h4>
+<p>Clears all the layout elements.</p>
+<h4>gridLayout(opts)</h4>
+<p>Renders a grid layout.</p>
+<h4>linearLayout(opts)</h4>
+<p>Renders a linear layout.</p>
+<h4>removeFromLayout(opts)</h4>
+<p>Removes an element with the given ID from the layout.</p>
 <hr>
 <h3>utils.palette</h3>
-<p>Collections of colour presets grouped into palettes.</p></article>
+<p>Collections of colour presets grouped into palettes. References color palette from Material Design (<code>https://www.google.com/design/spec/style/color.html</code>)</p></article>
     </section>
 
 
@@ -181,13 +259,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="calcs.html">calcs</a></li><li><a href="calcs.geometry.html">calcs.geometry</a></li><li><a href="calcs.geometry.triangle.html">calcs.geometry.triangle</a></li><li><a href="calcs.position.html">calcs.position</a></li><li><a href="calcs.position.rectangle.html">calcs.position.rectangle</a></li><li><a href="components.html">components</a></li><li><a href="components.arch.html">components.arch</a></li><li><a href="components.foil.html">components.foil</a></li><li><a href="data.html">data</a></li><li><a href="data.constants.html">data.constants</a></li><li><a href="data.functions.html">data.functions</a></li><li><a href="data.standards.html">data.standards</a></li><li><a href="profiles.html">profiles</a></li><li><a href="profiles.arch.html">profiles.arch</a></li><li><a href="profiles.curve.html">profiles.curve</a></li><li><a href="profiles.foil.html">profiles.foil</a></li><li><a href="profiles.rectFrame.html">profiles.rectFrame</a></li><li><a href="profiles.shapes.html">profiles.shapes</a></li><li><a href="profiles.shapes.ellipse.html">profiles.shapes.ellipse</a></li><li><a href="profiles.shapes.rectangle.html">profiles.shapes.rectangle</a></li><li><a href="profiles.shapes.square.html">profiles.shapes.square</a></li><li><a href="profiles.shapes.triangle.html">profiles.shapes.triangle</a></li><li><a href="utils.html">utils</a></li><li><a href="utils.colors.html">utils.colors</a></li><li><a href="utils.layout.html">utils.layout</a></li><li><a href="utils.palette.html">utils.palette</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="calcs.html">calcs</a></li><li><a href="calcs.geometry.html">calcs.geometry</a></li><li><a href="calcs.geometry.triangle.html">calcs.geometry.triangle</a></li><li><a href="calcs.position.html">calcs.position</a></li><li><a href="calcs.position.rectangle.html">calcs.position.rectangle</a></li><li><a href="components.html">components</a></li><li><a href="components.arch.html">components.arch</a></li><li><a href="components.foil.html">components.foil</a></li><li><a href="data.html">data</a></li><li><a href="data.constants.html">data.constants</a></li><li><a href="data.functions.html">data.functions</a></li><li><a href="data.standards.html">data.standards</a></li><li><a href="profiles.html">profiles</a></li><li><a href="profiles.arch.html">profiles.arch</a></li><li><a href="profiles.curve.html">profiles.curve</a></li><li><a href="profiles.curve.rightCorner.html">profiles.curve.rightCorner</a></li><li><a href="profiles.foil.html">profiles.foil</a></li><li><a href="profiles.rectFrame.html">profiles.rectFrame</a></li><li><a href="profiles.shapes.html">profiles.shapes</a></li><li><a href="profiles.shapes.ellipse.html">profiles.shapes.ellipse</a></li><li><a href="profiles.shapes.polygons.html">profiles.shapes.polygons</a></li><li><a href="profiles.shapes.rectangle.html">profiles.shapes.rectangle</a></li><li><a href="profiles.shapes.square.html">profiles.shapes.square</a></li><li><a href="profiles.shapes.triangle.html">profiles.shapes.triangle</a></li><li><a href="utils.html">utils</a></li><li><a href="utils.colors.html">utils.colors</a></li><li><a href="utils.layout.html">utils.layout</a></li><li><a href="utils.palette.html">utils.palette</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Nov 06 2026 13:40:44 GMT-0500 (Eastern Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Nov 06 2026 15:17:54 GMT-0500 (Eastern Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
