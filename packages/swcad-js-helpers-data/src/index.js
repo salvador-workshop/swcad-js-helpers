@@ -6,7 +6,7 @@ const standards = require('./standards')
 const errors = require('./errors')
 const internals = require('./internals')
 
-const dataInit = ({ jscad }) => {
+const dataInit = ({ jscad, swcadJs }) => {
     /**
      * Data
      * @namespace data
@@ -16,9 +16,9 @@ const dataInit = ({ jscad }) => {
     const data = {
         constants: constants,
         functions: functions,
-        standards: standards.init({ jscad }),
+        standards: standards.init({ jscad, swcadJs }),
         errors: errors,
-        internals: internals.init({ jscad }),
+        internals: internals.init({ jscad, swcadJs }),
     }
 
     return data

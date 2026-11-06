@@ -2,8 +2,8 @@
 
 const positionModule = require('./position')
 
-const calcsInit = ({ jscad, swcadJs }) => {
-    const position = positionModule.init({ jscad, swcadJs })
+const calcsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    const position = positionModule.init({ jscad, swcadJs, swcadJsHelpers })
 
     /**
      * Calculations

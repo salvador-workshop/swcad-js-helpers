@@ -3,30 +3,15 @@
 const archModule = require('./arch')
 const foilModule = require('./foil')
 
-const modelsInit = ({ jscad, swcadJs }) => {
-    const arch = archModule.init({ jscad, swcadJs })
-
-    const preLib = {
-        ...swcadJs,
-        models: {
-            arch,
-        }
+const componentsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    const components = {
+        arch: archModule.init({ jscad, swcadJs, swcadJsHelpers }),
+        foil: foilModule.init({ jscad, swcadJs, swcadJsHelpers }),
     }
 
-    /**
-     * Models
-     * @namespace models
-     * @author R. J. Salvador (Salvador Workshop)
-     */
-
-    const models = {
-        arch,
-        foil: foilModule.init({ jscad, swcadJs: preLib }),
-    }
-
-    return models
+    return components
 }
 
 module.exports = {
-    init: modelsInit,
+    init: componentsInit,
 };

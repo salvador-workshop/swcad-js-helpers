@@ -1,13 +1,9 @@
 "use strict"
 
-const rectangleInit = ({ jscad, swcadJs }) => {
-    const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-    const { intersect, union, subtract } = jscad.booleans
-    const { rotate, align } = jscad.transforms
-    const { geom2, path2 } = jscad.geometries
+const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    const { rectangle } = jscad.primitives
 
-    const { constants } = swcadJs.data
-    const { position } = swcadJs.calcs
+    const { constants } = swcadJsHelpers.data
 
     //--------------
     //  RECTANGLES

@@ -6,7 +6,7 @@
  * @namespace layout
  */
 
-const layoutUtils = ({ jscad, swcadJs }) => {
+const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { cuboid, rectangle } = jscad.primitives;
     const { union, subtract } = jscad.booleans;
     const { translate, align } = jscad.transforms;

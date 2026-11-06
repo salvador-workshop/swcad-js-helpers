@@ -1,13 +1,10 @@
 "use strict"
 
-const triangleInit = ({ jscad, swcadJs }) => {
-  const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-  const { intersect, union, subtract } = jscad.booleans
-  const { rotate, align } = jscad.transforms
-  const { geom2, path2 } = jscad.geometries
+const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
+  const { triangle } = jscad.primitives
 
-  const { constants } = swcadJs.data
-  const { position } = swcadJs.calcs
+  const { position } = swcadJsHelpers.calcs
+  const { constants } = swcadJsHelpers.data
 
   //-------------
   //  TRIANGLES

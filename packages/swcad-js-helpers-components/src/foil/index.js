@@ -2,11 +2,11 @@
 
 /**
  * Builds "foil" shapes such as trefoils, quatrefoils, cinquefoils, etc. Input 2D profiles must be centred at (0, 0, 0)
- * @memberof models
+ * @memberof components
  * @namespace foil
  */
 
-const foilBuilder = ({ jscad, swcadJs }) => {
+const foilBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { union, subtract, scission } = jscad.booleans
     const { rotate, align, translate, mirror } = jscad.transforms
     const { cuboid, rectangle } = jscad.primitives
@@ -15,7 +15,7 @@ const foilBuilder = ({ jscad, swcadJs }) => {
 
     /**
      * Builds a 3D n-foil opening using a given 2D cross-section profile
-     * @memberof models.foil
+     * @memberof components.foil
      * @instance
      * @param {Object} opts
      * @param {number} opts.numLobes - number of lobes
@@ -94,7 +94,7 @@ const foilBuilder = ({ jscad, swcadJs }) => {
         buildFoil3d,
         /**
          * Builds a trefoil opening using a given 2d cross-section profile
-         * @memberof models.foil
+         * @memberof components.foil
          * @instance
          * @param {Object} opts
          * @param {number} opts.radius - radius of container circle
@@ -107,7 +107,7 @@ const foilBuilder = ({ jscad, swcadJs }) => {
         },
         /**
          * Builds a quatrefoil opening using a given 2d cross-section profile
-         * @memberof models.foil
+         * @memberof components.foil
          * @instance
          * @param {Object} opts
          * @param {number} opts.radius - radius of container circle
@@ -120,7 +120,7 @@ const foilBuilder = ({ jscad, swcadJs }) => {
         },
         /**
          * Builds a cinquefoil opening using a given 2d cross-section profile
-         * @memberof models.foil
+         * @memberof components.foil
          * @instance
          * @param {Object} opts
          * @param {number} opts.radius - radius of container circle
@@ -133,7 +133,7 @@ const foilBuilder = ({ jscad, swcadJs }) => {
         },
         /**
          * Builds a sexfoil opening using a given 2d cross-section profile
-         * @memberof models.foil
+         * @memberof components.foil
          * @instance
          * @param {Object} opts
          * @param {number} opts.radius - radius of container circle
@@ -146,7 +146,7 @@ const foilBuilder = ({ jscad, swcadJs }) => {
         },
         /**
          * Builds an octofoil opening using a given 2d cross-section profile
-         * @memberof models.foil
+         * @memberof components.foil
          * @instance
          * @param {Object} opts
          * @param {number} opts.radius - radius of container circle
@@ -160,4 +160,4 @@ const foilBuilder = ({ jscad, swcadJs }) => {
     }
 }
 
-module.exports = { init: foilBuilder };
+module.exports = { init: foilBuilder3d };

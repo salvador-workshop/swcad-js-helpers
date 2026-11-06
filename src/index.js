@@ -1,8 +1,8 @@
 const coreModule = require('swcad-js-helpers-core');
 
-const init = ({ jscad }) => {
-    const swcadJs = coreModule.init({ jscad })
-    return swcadJs;
+const init = ({ jscad, swcadJs }) => {
+    const swcadJsHelpers = coreModule.init({ jscad, swcadJs })
+    return swcadJsHelpers;
 }
 
 module.exports = { init };

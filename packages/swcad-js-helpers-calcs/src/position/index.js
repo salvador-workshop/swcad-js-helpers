@@ -3,7 +3,7 @@
 const posRectangle = require('./pos-rectangle');
 const posTriangle = require('./pos-triangle');
 
-const positionUtils = ({ jscad, swcadJs }) => {
+const positionUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
     return {
         rectangle: posRectangle.init({ jscad, swcadJs }),

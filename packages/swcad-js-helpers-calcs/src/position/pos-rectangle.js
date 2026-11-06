@@ -8,9 +8,7 @@
 
 const geoRectangle = ({ jscad, swcadJs }) => {
     const {
-        measureDimensions,
         measureBoundingBox,
-        measureCenter
     } = jscad.measurements;
 
     const { position } = swcadJs.calcs

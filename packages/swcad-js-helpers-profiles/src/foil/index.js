@@ -6,7 +6,7 @@
  * @namespace foil
  */
 
-const foilBuilder = ({ jscad, swcadJs }) => {
+const foilBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { union } = jscad.booleans
     const { rotate, align } = jscad.transforms
     const { circle  } = jscad.primitives
@@ -133,4 +133,4 @@ const foilBuilder = ({ jscad, swcadJs }) => {
     }
 }
 
-module.exports = { init: foilBuilder };
+module.exports = { init: foilBuilder2d };

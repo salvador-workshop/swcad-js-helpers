@@ -1,14 +1,14 @@
 "use strict"
 
-const curveBuilder = ({ jscad, swcadJs }) => {
-    const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-    const { intersect, union, subtract } = jscad.booleans
-    const { rotate, align } = jscad.transforms
+const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    const { rectangle, } = jscad.primitives
+    const { subtract } = jscad.booleans
     const { bezier } = jscad.curves
     const { geom2, path2 } = jscad.geometries
 
-    const { constants } = swcadJs.data
     const { position } = swcadJs.calcs
+
+    const { constants } = swcadJsHelpers.data
 
     const getBezierPts = (bezierCurve, segments) => {
         const points = [];

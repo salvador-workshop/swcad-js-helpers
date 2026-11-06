@@ -6,13 +6,11 @@
  * @namespace arch
  */
 
-const archBuilder = ({ jscad, swcadJs }) => {
+const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { path2, geom2 } = jscad.geometries
-  const { extrudeRotate } = jscad.extrusions
-  const { arc, cuboid } = jscad.primitives
-  const { translate, mirror, rotate, align } = jscad.transforms
-  const { union, subtract, intersect } = jscad.booleans
-  const { measureDimensions } = jscad.measurements;
+  const { arc } = jscad.primitives
+  const { mirror, align } = jscad.transforms
+  const { intersect } = jscad.booleans
 
   return {
     /**
@@ -55,4 +53,4 @@ const archBuilder = ({ jscad, swcadJs }) => {
   }
 }
 
-module.exports = { init: archBuilder }
+module.exports = { init: archBuilder2d }
