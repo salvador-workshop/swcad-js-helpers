@@ -1,7 +1,7 @@
 "use strict"
 
 /**
- * Rectangle calculations
+ * Calculations around rectangle positions.
  * @memberof calcs.position
  * @namespace rectangle
  */
@@ -14,7 +14,7 @@ const geoRectangle = ({ jscad, swcadJs }) => {
     const { position } = swcadJs.calcs
 
     /**
-     * ...
+     * Gets 3D bounding coordinates for a given rectangle.
      * @memberof calcs.position.rectangle
      * @param {object} rectGeom 
      * @returns ...
@@ -24,14 +24,12 @@ const geoRectangle = ({ jscad, swcadJs }) => {
     }
 
     /**
-     * ...
+     * Gets 3D bounding corners for a given rectangle.
      * @memberof calcs.position.rectangle
      * @param {object} rectGeom 
      * @returns ...
      */
     const getRectangleCorners = (rectGeom) => {
-        const bBox = measureBoundingBox(rectGeom);
-
         const coords = getRectangleCoords(rectGeom);
         return {
             c1: [coords.right, coords.front, 0], // (+X, -Y)

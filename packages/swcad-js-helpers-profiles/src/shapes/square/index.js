@@ -4,6 +4,11 @@ const squareInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { square, circle } = jscad.primitives
   const { union, subtract } = jscad.booleans
 
+  /**
+   * Modelling functions for various squares.
+   * @memberof profiles.shapes
+   * @namespace square
+   */
   const squares = {
     /**
      * Square with circular notches at corners.

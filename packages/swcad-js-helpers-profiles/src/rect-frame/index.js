@@ -1,10 +1,10 @@
 "use strict"
 
-// /**
-//  * Builds rectangular frames with varying corner details
-//  * @memberof profiles.shapes.rectangle
-//  * @namespace frame
-//  */
+/**
+ * Builds rectangular frames with varying corner details
+ * @memberof profiles
+ * @namespace rectFrame
+ */
 
 const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { circle, rectangle } = jscad.primitives
@@ -218,7 +218,7 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
     /**
      * Builds a shaped rectangle with the given corner options
-     * @memberof profiles.shapes.rectangle
+     * @memberof profiles.rectFrame
      * @param {object} opts 
      * @param {number[]} opts.size
      * @param {object} opts.cornerOpts - options for interior side
@@ -237,7 +237,6 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
         cornerOpts = rectangularFrameDefOpts.cornerOpts,
     }) => {
         let outRect = rectangle({ size })
-        const outRectCoords = basePosition.getGeomCoords(outRect)
         const outRectCorners = position.rectangle.getRectangleCorners(outRect)
         const cornerStyle = cornerStyles[cornerOpts.style]
 
@@ -351,8 +350,8 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Builds a rectangular frame with the given corner options (interior and exterior)
-     * @memberof profiles.shapes.rectangle
+     * Generates a rectangular frame with the given corner options (interior and exterior).
+     * @memberof profiles.rectFrame
      * @param {object} opts 
      * @param {number[]} opts.size - Size of interior space
      * @param {string} opts.direction - Where ornaments are applied. Choose between "in" (default), "out", or "both"
@@ -366,7 +365,6 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {string} opts.cornerOpts.longAxis
      * @param {string} opts.cornerOpts.opt - Option for each corner. Choose between "inv", "inset", "offset"
      * @param {object} opts.outCornerOpts - options for exterior side
-     * @name frame
      * @static
      * @returns ...
      */

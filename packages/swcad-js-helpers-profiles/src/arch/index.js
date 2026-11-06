@@ -1,8 +1,8 @@
 "use strict"
 
 /**
- * Builds circle-based arches.
- * @memberof profiles.structure
+ * Modelling functions for 2D arches.
+ * @memberof profiles
  * @namespace arch
  */
 
@@ -15,7 +15,7 @@ const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
   return {
     /**
      * Builds a one-centre (semicircular) arch.
-     * @memberof profiles.structure.arch
+     * @memberof profiles.arch
      * @instance
      * @param {Object} opts 
      * @param {number} opts.arcRadius - arc radius 
@@ -27,7 +27,7 @@ const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     },
     /**
      * Builds a two-centre pointed arch.
-     * @memberof profiles.structure.arch
+     * @memberof profiles.arch
      * @instance
      * @param {Object} opts 
      * @param {number} opts.arcRadius - arc radius 
@@ -43,12 +43,6 @@ const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
       const reflectedArch = mirror({ normal: [1, 0, 0], origin: [mirrorAxis, 0, 0] }, baseArch);
       return align({ modes: ['center', 'min', 'min'] }, intersect(baseArch, reflectedArch));
 
-    },
-    threePt: (opts) => {
-      return null;
-    },
-    fourPt: (opts) => {
-      return null;
     },
   }
 }

@@ -6,16 +6,15 @@ const squareModule = require('./square')
 const triangleModule = require('./triangle')
 
 /**
- * Builds various 2D shapes
+ * Modelling functions for various basic shapes.
  * @memberof profiles
  * @namespace shapes
  */
 
 const shapesBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
-  const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-  const { intersect, union, subtract } = jscad.booleans
-  const { rotate, align } = jscad.transforms
-  const { geom2, path2 } = jscad.geometries
+  const { square } = jscad.primitives
+  const { intersect } = jscad.booleans
+  const { rotate } = jscad.transforms
 
   const ellipses = ellipseModule.init({ jscad, swcadJs, swcadJsHelpers })
   const rectangles = rectangleModule.init({ jscad, swcadJs, swcadJsHelpers })
@@ -23,9 +22,8 @@ const shapesBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const triangles = triangleModule.init({ jscad, swcadJs, swcadJsHelpers })
 
   /**
-   * octFromDiam
-   * @memberof profiles.shapes
-   * @alias octagon
+   * Generates an octagon from a given diametre.
+   * @memberof profiles.shapes.polygons
    * @instance
    * @param {Object} opts 
    * @param {number} opts.sqLength - side length for bounding square 
@@ -49,7 +47,12 @@ const shapesBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
     rectangle: rectangles,
     square: squares,
     triangle: triangles,
-    octagon: {
+    /**
+     * Modelling functions for various polygons.
+     * @memberof profiles.shapes
+     * @namespace polygons
+     */
+    polygons: {
       octFromDiam
     },
   }

@@ -1,13 +1,10 @@
 "use strict"
 
 /**
- * ...
+ * A set of named colour presets and their translucent versions. References color palette from Material Design (`https://www.google.com/design/spec/style/color.html`)
  * @memberof utils
  * @namespace colors
  */
-
-// Original color palette by
-// https://www.google.com/design/spec/style/color.html
 
 const colourUtils = ({ jscad, swcadJs }) => {
     const { hexToRgb } = jscad.colors;

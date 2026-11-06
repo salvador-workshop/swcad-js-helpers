@@ -1,7 +1,7 @@
 "use strict"
 
 /**
- * Builds circle-based arches. Input 2D profiles must be centred at (0, 0, 0)
+ * Modelling functions for 3D arches. Input 2D profiles must be centred at [0, 0, 0].
  * @memberof components
  * @namespace arch
  */
@@ -18,7 +18,7 @@ const archBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
   return {
     /**
-     * Builds a one-centre (semicircular) arch.
+     * Generates a one-centre (semicircular) arch using a given 2d cross-section profile.
      * @memberof components.arch
      * @instance
      * @param {Object} opts 
@@ -34,7 +34,7 @@ const archBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
     },
     /**
-     * Builds a two-centre pointed arch.
+     * Generates a two-centre pointed arch using a given 2d cross-section profile.
      * @memberof components.arch
      * @instance
      * @param {Object} opts 
@@ -65,12 +65,6 @@ const archBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
         rotate([Math.PI / 2, 0, 0], union(cutArch, reflectedArch))
       );
 
-    },
-    threePt: (opts, geomProfile) => {
-      return null;
-    },
-    fourPt: (opts, geomProfile) => {
-      return null;
     },
   }
 }

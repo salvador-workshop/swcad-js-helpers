@@ -1,16 +1,10 @@
 "use strict"
 
-/**
- * Triangle calculations
- * @memberof calcs.position
- * @namespace triangle
- */
-
-const geoTriangle = ({ jscad, swcadJs }) => {
+const geoTriangleInit = ({ jscad, swcadJs }) => {
     const { TAU } = jscad.maths.constants
 
     /**
-     * Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for `jscad.primitives.triangle()`. If invalid, returns `null`
+     * Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for `jscad.primitives.triangle()`. If invalid, returns `null`.
      * @param {object} opts 
      * @param {number} opts.hypot - hypotenuse
      * @param {number} opts.long - long side
@@ -18,6 +12,7 @@ const geoTriangle = ({ jscad, swcadJs }) => {
      * @param {number} opts.longAngle - long angle
      * @param {number} opts.shortAngle - short angle
      * @returns {{type: string, values: number[]}|null} - data for triangle creation
+     * @memberof calcs.geometry.triangle
      */
     const rightTriangleOpts = ({
         hypot,
@@ -81,9 +76,14 @@ const geoTriangle = ({ jscad, swcadJs }) => {
         }
     }
 
+    /**
+     * Geometric calculations for triangles.
+     * @memberof calcs.geometry
+     * @namespace triangle
+     */
     return {
         rightTriangleOpts,
     }
 }
 
-module.exports = { init: geoTriangle };
+module.exports = { init: geoTriangleInit };

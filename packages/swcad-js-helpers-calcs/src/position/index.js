@@ -1,14 +1,17 @@
 "use strict"
 
 const posRectangle = require('./pos-rectangle');
-const posTriangle = require('./pos-triangle');
 
-const positionUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
+const positionInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
+    /**
+     * Functions leveraging JSCAD to get position data or move 2D/3D geometries.
+     * @namespace position
+     * @memberof calcs
+     */
     return {
         rectangle: posRectangle.init({ jscad, swcadJs }),
-        triangle: posTriangle.init({ jscad, swcadJs }),
     }
 }
 
-module.exports = { init: positionUtils };
+module.exports = { init: positionInit };
