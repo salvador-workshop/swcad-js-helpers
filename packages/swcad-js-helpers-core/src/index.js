@@ -1,6 +1,6 @@
 "use strict"
 
-const coreInit = ({ jscad }) => {
+const coreInit = ({ jscad, swcadJs }) => {
 
     /**
      * First step to building the library

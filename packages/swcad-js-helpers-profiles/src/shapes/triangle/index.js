@@ -6,8 +6,9 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { rotate, align } = jscad.transforms
   const { geom2, path2 } = jscad.geometries
 
-  const { position } = swcadJs.calcs
+  const { position: basePosition } = swcadJs.calcs
 
+  const { position } = swcadJsHelpers.calcs
   const { constants } = swcadJsHelpers.data
 
   //-------------

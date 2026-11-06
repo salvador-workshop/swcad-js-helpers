@@ -12,6 +12,18 @@ const phi = 1.6180339887
 
 const constants = {
     /**
+     * Golden ratio
+     * @memberof data.constants
+     * @constant {number}
+     */
+    PHI: phi,
+    /**
+     * Golden ratio inverse
+     * @memberof data.constants
+     * @constant {number}
+     */
+    PHI_INV: 1 / phi,
+    /**
      * Plastic_Ratio
      * @memberof data.constants
      * @constant {number}

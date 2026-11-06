@@ -12,26 +12,10 @@ const shapesModule = require('./shapes')
  */
 
 const profilesInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
-    const shapesCore = shapesModule.init({ jscad, swcadJs, swcadJsHelpers })
+    const shapes = shapesModule.init({ jscad, swcadJs, swcadJsHelpers })
     const curve = curveModule.init({ jscad, swcadJs, swcadJsHelpers })
 
     let preLib = {
-        ...swcadJsHelpers,
-        profiles: {
-            shapes: shapesCore,
-            curve,
-        }
-    }
-
-    const shapes = {
-        ...shapesCore,
-        rectangle: {
-            ...shapesCore.rectangle,
-            frame: rectFrameModule.init({ jscad, swcadJs, swcadJsHelpers: preLib }),
-        }
-    }
-
-    preLib = {
         ...swcadJsHelpers,
         profiles: {
             shapes,
@@ -44,6 +28,7 @@ const profilesInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
         curve,
         foil: foilModule.init({ jscad, swcadJs, swcadJsHelpers: preLib }),
         shapes,
+        rectFrame: rectFrameModule.init({ jscad, swcadJs, swcadJsHelpers: preLib }),
     }
 }
 

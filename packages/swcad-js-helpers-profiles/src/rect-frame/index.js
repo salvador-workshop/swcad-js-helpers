@@ -13,8 +13,10 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { measureDimensions } = jscad.measurements
     const { TAU } = jscad.maths.constants
 
-    const { position } = swcadJs.calcs
-    const { shapes, curve } = swcadJsHelpers
+    const { position: basePosition } = swcadJs.calcs
+
+    const { position } = swcadJsHelpers.calcs
+    const { shapes, curve } = swcadJsHelpers.profiles
 
     // Defining corner styles and available tag options
     const cornerStyleTypes = ['round', 'tri', 'rect', 'ellipse', 'cornerBez']
@@ -235,7 +237,7 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
         cornerOpts = rectangularFrameDefOpts.cornerOpts,
     }) => {
         let outRect = rectangle({ size })
-        const outRectCoords = position.getGeomCoords(outRect)
+        const outRectCoords = basePosition.getGeomCoords(outRect)
         const outRectCorners = position.rectangle.getRectangleCorners(outRect)
         const cornerStyle = cornerStyles[cornerOpts.style]
 
@@ -253,7 +255,7 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
             Object.entries(outRectCorners).forEach(([cName, cPt]) => {
                 let inPieceRotation = null
-                let inPieceAlign = position.alignModes.ctr
+                let inPieceAlign = basePosition.alignModes.ctr
                 let inPieceMirror = null
 
                 if (cornerOpts.longAxis == 'y') {
@@ -380,7 +382,7 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 frameWidth * 2 + size[0],
                 frameWidth * 2 + size[1],
             ],
-            longAxis: cornerOpts.longAxis || position.findLongAxis(size)
+            longAxis: cornerOpts.longAxis || basePosition.findLongAxis(size)
         }
 
         const iCornOpts = { ...cornerOpts, longAxis: specs.longAxis }
