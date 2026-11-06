@@ -1,9 +1,8 @@
 "use strict"
 
 const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
-    const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-    const { intersect, union, subtract } = jscad.booleans
-    const { rotate, align } = jscad.transforms
+    const { rectangle, } = jscad.primitives
+    const { subtract } = jscad.booleans
     const { bezier } = jscad.curves
     const { geom2, path2 } = jscad.geometries
 

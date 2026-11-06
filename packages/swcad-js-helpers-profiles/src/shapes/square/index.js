@@ -1,14 +1,8 @@
 "use strict"
 
 const squareInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
-  const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-  const { intersect, union, subtract } = jscad.booleans
-  const { rotate, align } = jscad.transforms
-  const { geom2, path2 } = jscad.geometries
-
-  const { position } = swcadJs.calcs
-
-  const { constants } = swcadJsHelpers.data
+  const { square, circle } = jscad.primitives
+  const { union, subtract } = jscad.booleans
 
   const squares = {
     /**

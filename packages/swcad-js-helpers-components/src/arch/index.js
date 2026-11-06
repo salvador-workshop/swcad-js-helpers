@@ -7,11 +7,11 @@
  */
 
 const archBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
-  const { path2, geom2 } = jscad.geometries
+  const { geom2 } = jscad.geometries
   const { extrudeRotate } = jscad.extrusions
-  const { arc, cuboid } = jscad.primitives
-  const { translate, mirror, rotate, align } = jscad.transforms
-  const { union, subtract, intersect } = jscad.booleans
+  const { cuboid } = jscad.primitives
+  const { translate, mirror, rotate } = jscad.transforms
+  const { union, subtract } = jscad.booleans
   const { measureDimensions } = jscad.measurements;
 
   const { position } = swcadJs.calcs
