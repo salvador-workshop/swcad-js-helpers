@@ -34,15 +34,17 @@
 //  * @namespace frame
 //  */
 
-const rectangularFrameInit = ({ jscad, swcadJs }) => {
+const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { circle, rectangle } = jscad.primitives
     const { rotate, align, mirror } = jscad.transforms
     const { subtract, union } = jscad.booleans
     const { measureDimensions } = jscad.measurements
     const { TAU } = jscad.maths.constants
 
-    const { shapes, curve } = swcadJs.profiles
-    const { position } = swcadJs.calcs
+    const { position: basePosition } = swcadJs.calcs
+
+    const { position } = swcadJsHelpers.calcs
+    const { shapes, curve } = swcadJsHelpers.profiles
 
     // Defining corner styles and available tag options
     const cornerStyleTypes = ['round', 'tri', 'rect', 'ellipse', 'cornerBez']
@@ -263,7 +265,7 @@ const rectangularFrameInit = ({ jscad, swcadJs }) => {
         cornerOpts = rectangularFrameDefOpts.cornerOpts,
     }) => {
         let outRect = rectangle({ size })
-        const outRectCoords = position.getGeomCoords(outRect)
+        const outRectCoords = basePosition.getGeomCoords(outRect)
         const outRectCorners = position.rectangle.getRectangleCorners(outRect)
         const cornerStyle = cornerStyles[cornerOpts.style]
 
@@ -281,7 +283,7 @@ const rectangularFrameInit = ({ jscad, swcadJs }) => {
 
             Object.entries(outRectCorners).forEach(([cName, cPt]) => {
                 let inPieceRotation = null
-                let inPieceAlign = position.alignModes.ctr
+                let inPieceAlign = basePosition.alignModes.ctr
                 let inPieceMirror = null
 
                 if (cornerOpts.longAxis == 'y') {
@@ -408,7 +410,7 @@ const rectangularFrameInit = ({ jscad, swcadJs }) => {
                 frameWidth * 2 + size[0],
                 frameWidth * 2 + size[1],
             ],
-            longAxis: cornerOpts.longAxis || position.findLongAxis(size)
+            longAxis: cornerOpts.longAxis || basePosition.findLongAxis(size)
         }
 
         const iCornOpts = { ...cornerOpts, longAxis: specs.longAxis }
@@ -454,13 +456,13 @@ module.exports = { init: rectangularFrameInit };
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="calcs.html">calcs</a></li><li><a href="calcs.position.rectangle.html">calcs.position.rectangle</a></li><li><a href="calcs.position.triangle.html">calcs.position.triangle</a></li><li><a href="data.html">data</a></li><li><a href="data.constants.html">data.constants</a></li><li><a href="data.functions.html">data.functions</a></li><li><a href="data.standards.html">data.standards</a></li><li><a href="data.standards.gridfinity.html">data.standards.gridfinity</a></li><li><a href="data.standards.params.html">data.standards.params</a></li><li><a href="data.standards.pegboard.html">data.standards.pegboard</a></li><li><a href="data.standards.types.html">data.standards.types</a></li><li><a href="models.html">models</a></li><li><a href="models.arch.html">models.arch</a></li><li><a href="models.foil.html">models.foil</a></li><li><a href="profiles.html">profiles</a></li><li><a href="profiles.curve.html">profiles.curve</a></li><li><a href="profiles.shapes.html">profiles.shapes</a></li><li><a href="profiles.shapes.ellipse.html">profiles.shapes.ellipse</a></li><li><a href="profiles.shapes.rectangle.html">profiles.shapes.rectangle</a></li><li><a href="profiles.shapes.triangle.html">profiles.shapes.triangle</a></li><li><a href="profiles.structure.arch.html">profiles.structure.arch</a></li><li><a href="profiles.structure.foil.html">profiles.structure.foil</a></li><li><a href="utils.html">utils</a></li><li><a href="utils.colors.html">utils.colors</a></li><li><a href="utils.layout.html">utils.layout</a></li><li><a href="utils.palette.html">utils.palette</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="calcs.html">calcs</a></li><li><a href="calcs.position.rectangle.html">calcs.position.rectangle</a></li><li><a href="calcs.position.triangle.html">calcs.position.triangle</a></li><li><a href="components.arch.html">components.arch</a></li><li><a href="components.foil.html">components.foil</a></li><li><a href="data.html">data</a></li><li><a href="data.constants.html">data.constants</a></li><li><a href="data.functions.html">data.functions</a></li><li><a href="data.standards.html">data.standards</a></li><li><a href="data.standards.gridfinity.html">data.standards.gridfinity</a></li><li><a href="data.standards.params.html">data.standards.params</a></li><li><a href="data.standards.pegboard.html">data.standards.pegboard</a></li><li><a href="data.standards.types.html">data.standards.types</a></li><li><a href="profiles.html">profiles</a></li><li><a href="profiles.curve.html">profiles.curve</a></li><li><a href="profiles.shapes.html">profiles.shapes</a></li><li><a href="profiles.shapes.ellipse.html">profiles.shapes.ellipse</a></li><li><a href="profiles.shapes.rectangle.html">profiles.shapes.rectangle</a></li><li><a href="profiles.shapes.triangle.html">profiles.shapes.triangle</a></li><li><a href="profiles.structure.arch.html">profiles.structure.arch</a></li><li><a href="profiles.structure.foil.html">profiles.structure.foil</a></li><li><a href="utils.html">utils</a></li><li><a href="utils.colors.html">utils.colors</a></li><li><a href="utils.layout.html">utils.layout</a></li><li><a href="utils.palette.html">utils.palette</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Thu Nov 05 2026 15:35:54 GMT-0500 (Eastern Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Thu Nov 05 2026 20:26:37 GMT-0500 (Eastern Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
