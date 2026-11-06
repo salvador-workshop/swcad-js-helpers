@@ -47,89 +47,130 @@
 <p>...</p>
 <hr>
 <h2>SWCAD-JS Helpers API</h2>
-<p>...</p>
+<p>SWCAD-JS Helper functions and utilities.</p>
 <hr>
 <br/>
 <h3>DATA</h3>
-<p>...</p>
+<p>Mostly math constants and common dimensions/options.</p>
 <hr>
 <h3>data.constants</h3>
-<p>...</p>
+<p>Numeric constants and ratios.</p>
 <hr>
 <h3>data.functions</h3>
-<p>...</p>
+<p>Functions that support data initialization and access.</p>
 <h4>camelCase(str)</h4>
-<p>...</p>
+<p>Converts the given string to camel case, using spaces/whitespace as delimiters.</p>
 <h4>constantToCamelCase(str)</h4>
-<p>...</p>
+<p>Converts constant-style strings (capitals w/ underscores) to camel case.</p>
 <hr>
 <h3>data.standards</h3>
-<p>...</p>
+<p>Dimensions and options used throughout the SWCAD-JS system.</p>
 <hr>
 <br/>
 <h3>CALCS</h3>
-<p>...</p>
+<p>Math calculations and basic JSCAD operations.</p>
+<hr>
+<h3>calcs.position</h3>
+<p>Functions leveraging JSCAD to get position data or move 2D/3D geometries.</p>
 <hr>
 <h3>calcs.position.rectangle</h3>
-<p>...</p>
+<p>Calculations around rectangle positions.</p>
 <h4>getRectangleCoords(rectGeom)</h4>
-<p>...</p>
+<p>Gets 3D bounding coordinates for a given rectangle.</p>
 <h4>getRectangleCorners(rectGeom)</h4>
-<p>...</p>
+<p>Gets 3D bounding corners for a given rectangle.</p>
 <hr>
-<h3>calcs.position.triangle</h3>
-<p>...</p>
+<h3>calcs.geometry</h3>
+<p>Geometric calculations in 2D/3D space.</p>
+<hr>
+<h3>calcs.geometry.triangle</h3>
+<p>Geometric calculations for triangles.</p>
+<h4>rightTriangleOpts(opts)</h4>
+<p>Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for <code>jscad.primitives.triangle()</code>. If invalid, returns <code>null</code></p>
 <hr>
 <br/>
 <h3>PROFILES</h3>
-<p>...</p>
+<p>Modelling functions that generate 2D geometries.</p>
 <hr>
 <h3>profiles.arch</h3>
-<p>...</p>
+<p>Modelling functions for 2D arches.</p>
+<h4>onePtArch(opts)</h4>
+<p>Builds a one-centre (semicircular) arch.</p>
+<h4>twoPtArch(opts)</h4>
+<p>Builds a two-centre pointed arch.</p>
 <hr>
 <h3>profiles.curve</h3>
-<p>...</p>
+<p>Modelling functions for curves.</p>
 <hr>
 <h3>profiles.foil</h3>
-<p>...</p>
+<p>Modelling functions for 2D &quot;foils&quot; (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc.</p>
+<h4>cinquefoil(opts)</h4>
+<p>Builds a cinquefoil outline.</p>
+<h4>octofoil(opts)</h4>
+<p>Builds an octofoil outline.</p>
+<h4>quatrefoil(opts)</h4>
+<p>Builds a quatrefoil outline.</p>
+<h4>sexfoil(opts)</h4>
+<p>Builds a sexfoil outline.</p>
+<h4>trefoil(opts)</h4>
+<p>Builds a trefoil outline.</p>
+<hr>
+<h3>profiles.rectFrame</h3>
+<p>Modelling functions for rectangular frames with various corner options.</p>
 <hr>
 <h3>profiles.shapes</h3>
-<p>...</p>
+<p>Modelling functions for various basic shapes.</p>
 <hr>
 <h3>profiles.shapes.ellipse</h3>
-<p>...</p>
+<p>Modelling functions for various ellipses.</p>
 <hr>
 <h3>profiles.shapes.rectangle</h3>
-<p>...</p>
+<p>Modelling functions for various rectangles.</p>
 <hr>
 <h3>profiles.shapes.square</h3>
-<p>...</p>
+<p>Modelling functions for various squares.</p>
 <hr>
 <h3>profiles.shapes.triangle</h3>
-<p>...</p>
+<p>Modelling functions for various triangles.</p>
 <hr>
 <br/>
 <h3>COMPONENTS</h3>
-<p>...</p>
+<p>Modelling functions that generate 3D geometries.</p>
 <hr>
 <h3>components.arch</h3>
-<p>...</p>
+<p>Modelling functions for 3D arches. Input 2D profiles must be centred at [0, 0, 0].</p>
+<h4>onePtArch(opts, geomProfile)</h4>
+<p>Builds a one-centre (semicircular) arch using a given 2d cross-section profile.</p>
+<h4>twoPtArch(opts, geomProfile)</h4>
+<p>Builds a two-centre pointed arch using a given 2d cross-section profile.</p>
 <hr>
 <h3>components.foil</h3>
-<p>...</p>
+<p>Modelling functions for 3D &quot;foils&quot; (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc. Input 2D profiles must be centred at [0, 0, 0].</p>
+<h4>cinquefoil(opts, geomProfile)</h4>
+<p>Builds a cinquefoil opening using a given 2d cross-section profile.</p>
+<h4>octofoil(opts, geomProfile)</h4>
+<p>Builds an octofoil opening using a given 2d cross-section profile.</p>
+<h4>quatrefoil(opts, geomProfile)</h4>
+<p>Builds a quatrefoil opening using a given 2d cross-section profile.</p>
+<h4>sexfoil(opts, geomProfile)</h4>
+<p>Builds a sexfoil opening using a given 2d cross-section profile.</p>
+<h4>trefoil(opts, geomProfile)</h4>
+<p>Builds a trefoil opening using a given 2d cross-section profile.</p>
 <hr>
 <br/>
 <h3>UTILS</h3>
-<p>...</p>
+<p>Various utility helpers, mainly for the final modelling output.</p>
 <hr>
 <h3>utils.colors</h3>
-<p>...</p>
+<p>A set of named colour presets and their translucent versions. Original color palette from Material Design (<code>https://www.google.com/design/spec/style/color.html</code>)</p>
 <hr>
 <h3>utils.layout</h3>
-<p>...</p>
+<p>Utilities for arranging sets of 2D/3D geometries into various layouts, with additional options for rendering text labels and descriptions.</p>
+<h4>addToLayout(opts, geom)</h4>
+<p>Adds element to layout</p>
 <hr>
 <h3>utils.palette</h3>
-<p>...</p></article>
+<p>Collections of colour presets grouped into palettes.</p></article>
     </section>
 
 
@@ -146,7 +187,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Nov 06 2026 12:48:21 GMT-0500 (Eastern Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Nov 06 2026 13:35:13 GMT-0500 (Eastern Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
