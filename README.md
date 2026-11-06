@@ -158,11 +158,67 @@ Modelling functions for various basic shapes.
 
 Modelling functions for various ellipses.
 
+#### bronze(opts)
+
+Generates an ellipse with axis lengths corresponding to the Bronze ratio.
+
+#### copper(opts)
+
+Generates an ellipse with axis lengths corresponding to the Copper ratio.
+
+#### golden(opts)
+
+Generates an ellipse with axis lengths corresponding to the Golden ratio.
+
+#### plastic(opts)
+
+Generates an ellipse with axis lengths corresponding to the Plastic ratio.
+
+#### silver(opts)
+
+Generates an ellipse with axis lengths corresponding to the Silver ratio.
+
+#### sixtyThirty(opts)
+
+Generates an ellipse with axis lengths corresponding to a 30-degree right triangle's sides.
+
+#### superGolden(opts)
+
+Generates an ellipse with axis lengths corresponding to the Super-golden ratio.
+
 ---
 
 ### profiles.shapes.rectangle
 
 Modelling functions for various rectangles.
+
+#### bronze(opts)
+
+Generates a rectangle with side lengths corresponding to the Bronze ratio.
+
+#### copper(opts)
+
+Generates a rectangle with side lengths corresponding to the Copper ratio.
+
+#### golden(opts)
+
+Generates a rectangle with side lengths corresponding to the Golden ratio.
+
+#### plastic(opts)
+
+Generates a rectangle with side lengths corresponding to the Plastic ratio.
+
+#### silver(opts)
+
+Generates a rectangle with side lengths corresponding to the Silver ratio.
+
+#### sixtyThirty(opts)
+
+Generates a rectangle with side lengths corresponding to a 30-degree right triangle's sides.
+
+#### superGolden(opts)
+
+Generates a rectangle with side lengths corresponding to the Super-golden ratio.
 
 ---
 
@@ -170,11 +226,47 @@ Modelling functions for various rectangles.
 
 Modelling functions for various squares.
 
+#### cornerCircNotch(opts)
+
+Square with circular notches at corners.
+
+#### cornerCircles(opts)
+
+Square with circles at corners.
+
 ---
 
 ### profiles.shapes.triangle
 
 Modelling functions for various triangles.
+
+#### equilateral(opts)
+
+Generates an equilateral triangle.
+
+#### right30(opts)
+
+Generates a right triangle with a 30-degree angle.
+
+#### right45(opts)
+
+Generates a right triangle with a 45-degree angle.
+
+#### rightBronze(opts)
+
+Generates a right triangle with side lengths corresponding to the Bronze ratio.
+
+#### rightCopper(opts)
+
+Generates a right triangle with side lengths corresponding to the Copper ratio.
+
+#### rightGolden(opts)
+
+Generates a right triangle with side lengths corresponding to the Golden ratio.
+
+#### rightSilver(opts)
+
+Generates a right triangle with side lengths corresponding to the Silver ratio.
 
 ---
 
@@ -246,7 +338,23 @@ Utilities for arranging sets of 2D/3D geometries into various layouts, with addi
 
 #### addToLayout(opts, geom)
 
-Adds element to layout
+Adds element to the layout.
+
+#### clearLayout(opts)
+
+Clears all the layout elements.
+
+#### gridLayout(opts)
+
+Renders a grid layout.
+
+#### linearLayout(opts)
+
+Renders a linear layout.
+
+#### removeFromLayout(opts)
+
+Removes an element with the given ID from the layout.
 
 ---
 

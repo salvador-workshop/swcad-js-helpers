@@ -191,6 +191,8 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
     /**
      * Renders a linear layout
+     * @param {object} opts
+     * @instance
      * @memberof utils.layout
      */
     const linearLayout = ({ layoutOpts }) => {
@@ -247,6 +249,8 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
     /**
      * Renders a grid layout
+     * @param {object} opts
+     * @instance
      * @memberof utils.layout
      */
     const gridLayout = ({ layoutOpts }) => {
@@ -347,6 +351,8 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
         },
         /**
          * Removes an element with the given ID from the layout.
+         * @param {object} opts
+         * @instance
          * @memberof utils.layout
          */
         removeFromLayout: ({ id }) => {
@@ -354,6 +360,8 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
         },
         /**
          * Clears all the layout elements.
+         * @param {object} opts
+         * @instance
          * @memberof utils.layout
          */
         clearLayout: () => {
