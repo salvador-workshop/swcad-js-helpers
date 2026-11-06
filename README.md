@@ -52,6 +52,12 @@
 
 ---
 
+### calcs.position
+
+...
+
+---
+
 ### calcs.position.rectangle
 
 ...
@@ -66,7 +72,13 @@
 
 ---
 
-### calcs.position.triangle
+### calcs.geometry
+
+...
+
+---
+
+### calcs.geometry.triangle
 
 ...
 
@@ -93,6 +105,12 @@
 ---
 
 ### profiles.foil
+
+...
+
+---
+
+### profiles.rectFrame
 
 ...
 
