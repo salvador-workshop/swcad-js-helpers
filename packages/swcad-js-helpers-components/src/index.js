@@ -4,6 +4,11 @@ const archModule = require('./arch')
 const foilModule = require('./foil')
 
 const componentsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    /**
+     * ...
+     * @namespace components
+     * @author R. J. Salvador (Salvador Workshop)
+     */
     const components = {
         arch: archModule.init({ jscad, swcadJs, swcadJsHelpers }),
         foil: foilModule.init({ jscad, swcadJs, swcadJsHelpers }),

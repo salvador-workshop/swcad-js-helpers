@@ -2,11 +2,11 @@
 
 /**
  * Triangle calculations
- * @memberof calcs.position
+ * @memberof calcs.geometry
  * @namespace triangle
  */
 
-const geoTriangle = ({ jscad, swcadJs }) => {
+const geoTriangleInit = ({ jscad, swcadJs }) => {
     const { TAU } = jscad.maths.constants
 
     /**
@@ -86,4 +86,4 @@ const geoTriangle = ({ jscad, swcadJs }) => {
     }
 }
 
-module.exports = { init: geoTriangle };
+module.exports = { init: geoTriangleInit };

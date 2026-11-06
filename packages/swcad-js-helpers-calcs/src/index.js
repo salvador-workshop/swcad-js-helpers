@@ -1,8 +1,10 @@
 "use strict"
 
+const geometryModule = require('./geometry')
 const positionModule = require('./position')
 
 const calcsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    const geometry = geometryModule.init({ jscad, swcadJs, swcadJsHelpers })
     const position = positionModule.init({ jscad, swcadJs, swcadJsHelpers })
 
     /**
@@ -12,6 +14,7 @@ const calcsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      */
 
     const calcs = {
+        geometry,
         position,
     }
 

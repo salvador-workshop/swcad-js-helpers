@@ -2,7 +2,7 @@
 
 /**
  * Builds circle-based arches.
- * @memberof profiles.structure
+ * @memberof profiles
  * @namespace arch
  */
 
@@ -15,7 +15,7 @@ const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
   return {
     /**
      * Builds a one-centre (semicircular) arch.
-     * @memberof profiles.structure.arch
+     * @memberof profiles.arch
      * @instance
      * @param {Object} opts 
      * @param {number} opts.arcRadius - arc radius 
@@ -27,7 +27,7 @@ const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     },
     /**
      * Builds a two-centre pointed arch.
-     * @memberof profiles.structure.arch
+     * @memberof profiles.arch
      * @instance
      * @param {Object} opts 
      * @param {number} opts.arcRadius - arc radius 
