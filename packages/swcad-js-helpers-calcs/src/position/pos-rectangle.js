@@ -30,8 +30,6 @@ const geoRectangle = ({ jscad, swcadJs }) => {
      * @returns ...
      */
     const getRectangleCorners = (rectGeom) => {
-        const bBox = measureBoundingBox(rectGeom);
-
         const coords = getRectangleCoords(rectGeom);
         return {
             c1: [coords.right, coords.front, 0], // (+X, -Y)

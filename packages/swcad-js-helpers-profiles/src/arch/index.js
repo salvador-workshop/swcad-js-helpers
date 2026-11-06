@@ -44,12 +44,6 @@ const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return align({ modes: ['center', 'min', 'min'] }, intersect(baseArch, reflectedArch));
 
     },
-    threePt: (opts) => {
-      return null;
-    },
-    fourPt: (opts) => {
-      return null;
-    },
   }
 }
 

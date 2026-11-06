@@ -237,7 +237,6 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
         cornerOpts = rectangularFrameDefOpts.cornerOpts,
     }) => {
         let outRect = rectangle({ size })
-        const outRectCoords = basePosition.getGeomCoords(outRect)
         const outRectCorners = position.rectangle.getRectangleCorners(outRect)
         const cornerStyle = cornerStyles[cornerOpts.style]
 

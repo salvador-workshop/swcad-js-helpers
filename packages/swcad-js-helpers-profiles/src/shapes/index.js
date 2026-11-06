@@ -12,10 +12,9 @@ const triangleModule = require('./triangle')
  */
 
 const shapesBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
-  const { square, circle, rectangle, triangle, ellipse } = jscad.primitives
-  const { intersect, union, subtract } = jscad.booleans
-  const { rotate, align } = jscad.transforms
-  const { geom2, path2 } = jscad.geometries
+  const { square } = jscad.primitives
+  const { intersect } = jscad.booleans
+  const { rotate } = jscad.transforms
 
   const ellipses = ellipseModule.init({ jscad, swcadJs, swcadJsHelpers })
   const rectangles = rectangleModule.init({ jscad, swcadJs, swcadJsHelpers })
