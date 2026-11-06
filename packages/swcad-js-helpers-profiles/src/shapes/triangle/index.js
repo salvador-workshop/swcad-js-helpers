@@ -20,13 +20,13 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
   }
 
   /**
-   * Triangle profiles
+   * Modelling functions for various triangles.
    * @memberof profiles.shapes
    * @namespace triangle
    */
   const triangles = {
     /**
-     * ...
+     * Generates an equilateral triangle.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...
@@ -35,7 +35,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return triangle({ type: 'SSS', values: [base, base, base] })
     },
     /**
-     * ...
+     * Generates a right triangle with a 45-degree angle.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...
@@ -45,7 +45,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return triangle(triOpts);
     },
     /**
-     * ...
+     * Generates a right triangle with a 30-degree angle.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...
@@ -54,7 +54,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return createRtTriangle({ base, height, ratio: 2 });
     },
     /**
-     * ...
+     * Generates a right triangle with side lengths corresponding to the Golden ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...
@@ -63,7 +63,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return createRtTriangle({ base, height, ratio: constants.PHI });
     },
     /**
-     * ...
+     * Generates a right triangle with side lengths corresponding to the Silver ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...
@@ -72,7 +72,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return createRtTriangle({ base, height, ratio: constants.SILVER_RATIO });
     },
     /**
-     * ...
+     * Generates a right triangle with side lengths corresponding to the Bronze ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...
@@ -81,7 +81,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       return createRtTriangle({ base, height, ratio: constants.BRONZE_RATIO });
     },
     /**
-     * ...
+     * Generates a right triangle with side lengths corresponding to the Copper ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
      * @returns ...

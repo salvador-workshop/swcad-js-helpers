@@ -1,7 +1,7 @@
 "use strict"
 
 /**
- * Builds circle-based arches.
+ * Modelling functions for 2D arches.
  * @memberof profiles
  * @namespace arch
  */

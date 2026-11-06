@@ -1,7 +1,7 @@
 "use strict"
 
 /**
- * ...
+ * Utilities for arranging sets of 2D/3D geometries into various layouts, with additional options for rendering text labels and descriptions.
  * @memberof utils
  * @namespace layout
  */
@@ -190,7 +190,7 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Renders a linear layout
+     * Renders a linear layout.
      * @param {object} opts
      * @instance
      * @memberof utils.layout
@@ -248,7 +248,7 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Renders a grid layout
+     * Renders a grid layout.
      * @param {object} opts
      * @instance
      * @memberof utils.layout

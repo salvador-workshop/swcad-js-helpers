@@ -1,7 +1,7 @@
 "use strict"
 
 /**
- * ...
+ * Dimensions and options used throughout the SWCAD-JS system.
  * @memberof data
  * @namespace standards
  */

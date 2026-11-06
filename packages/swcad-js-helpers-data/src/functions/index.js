@@ -1,11 +1,11 @@
 /**
- * Odd utilities
+ * Functions that support data initialization and access.
  * @memberof data
  * @namespace functions
  */
 
 /**
- * Camel Case
+ * Converts the given string to camel case, using spaces/whitespace as delimiters.
  * @memberof data.functions
  * @param {string} str string with whitespace
  * @returns camel-case string
@@ -18,7 +18,7 @@ const camelCase = (str) => {
 }
 
 /**
- * Constant To Camel Case
+ * Converts constant-style strings (capitals w/ underscores) to camel case.
  * @memberof data.functions
  * @param {string} str constant-style string (capitals w/ underscores)
  * @returns camel-case string

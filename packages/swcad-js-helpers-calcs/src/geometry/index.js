@@ -5,7 +5,7 @@ const geoTriangleModule = require('./geo-rectangle');
 const geometryInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
 
     /**
-     * ...
+     * Geometric calculations in 2D/3D space.
      * @namespace geometry
      * @memberof calcs
      */

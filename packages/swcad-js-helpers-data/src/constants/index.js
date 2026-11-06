@@ -5,7 +5,7 @@ const tri45Factor = Math.sqrt(2)
 const phi = 1.6180339887
 
 /**
- * System constants
+ * Numeric constants and ratios.
  * @namespace constants
  * @memberof data
  */

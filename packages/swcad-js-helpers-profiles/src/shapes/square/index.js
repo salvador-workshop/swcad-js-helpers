@@ -5,7 +5,7 @@ const squareInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { union, subtract } = jscad.booleans
 
   /**
-   * Square profiles
+   * Modelling functions for various squares.
    * @memberof profiles.shapes
    * @namespace square
    */

@@ -1,7 +1,7 @@
 "use strict"
 
 /**
- * ...
+ * Collections of colour presets grouped into palettes. References color palette from Material Design (`https://www.google.com/design/spec/style/color.html`)
  * @memberof utils
  * @namespace palette
  */

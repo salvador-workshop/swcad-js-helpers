@@ -77,7 +77,7 @@ const geoTriangleInit = ({ jscad, swcadJs }) => {
     }
 
     /**
-     * Triangle calculations
+     * Geometric calculations for triangles.
      * @memberof calcs.geometry
      * @namespace triangle
      */

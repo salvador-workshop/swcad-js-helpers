@@ -351,7 +351,7 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Builds a rectangular frame with the given corner options (interior and exterior)
+     * Generates a rectangular frame with the given corner options (interior and exterior).
      * @memberof profiles.rectFrame
      * @param {object} opts 
      * @param {number[]} opts.size - Size of interior space
@@ -366,7 +366,6 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {string} opts.cornerOpts.longAxis
      * @param {string} opts.cornerOpts.opt - Option for each corner. Choose between "inv", "inset", "offset"
      * @param {object} opts.outCornerOpts - options for exterior side
-     * @name frame
      * @static
      * @returns ...
      */

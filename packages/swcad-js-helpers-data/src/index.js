@@ -3,8 +3,6 @@
 const constants = require('./constants')
 const functions = require('./functions')
 const standards = require('./standards')
-const errors = require('./errors')
-const internals = require('./internals')
 
 const dataInit = ({ jscad, swcadJs }) => {
     /**
@@ -17,8 +15,6 @@ const dataInit = ({ jscad, swcadJs }) => {
         constants: constants,
         functions: functions,
         standards: standards.init({ jscad, swcadJs }),
-        errors: errors,
-        internals: internals.init({ jscad, swcadJs }),
     }
 
     return data

@@ -84,7 +84,7 @@ Geometric calculations for triangles.
 
 #### rightTriangleOpts(opts)
 
-Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for `jscad.primitives.triangle()`. If invalid, returns `null`
+Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for `jscad.primitives.triangle()`. If invalid, returns `null`.
 
 ---
 
@@ -102,11 +102,11 @@ Modelling functions for 2D arches.
 
 #### onePtArch(opts)
 
-Builds a one-centre (semicircular) arch.
+Generates a one-centre (semicircular) arch.
 
 #### twoPtArch(opts)
 
-Builds a two-centre pointed arch.
+Generates a two-centre pointed arch.
 
 ---
 
@@ -116,29 +116,63 @@ Modelling functions for curves.
 
 ---
 
+### profiles.curve.rightCorner
+
+Modelling functions for right-angle corner curves.
+
+#### bronze(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to the Bronze ratio.
+
+#### copper(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to the Copper ratio.
+
+#### golden(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to the Golden ratio.
+
+#### plastic(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to the Plastic ratio.
+
+#### silver(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to the Silver ratio.
+
+#### sixtyThirty(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to a 30-degree right triangle's sides.
+
+#### superGolden(opts)
+
+Generates a right-angle corner curve with axis lengths corresponding to the Super-golden ratio.
+
+---
+
 ### profiles.foil
 
 Modelling functions for 2D "foils" (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc.
 
 #### cinquefoil(opts)
 
-Builds a cinquefoil outline.
+Generates a cinquefoil outline.
 
 #### octofoil(opts)
 
-Builds an octofoil outline.
+Generates an octofoil outline.
 
 #### quatrefoil(opts)
 
-Builds a quatrefoil outline.
+Generates a quatrefoil outline.
 
 #### sexfoil(opts)
 
-Builds a sexfoil outline.
+Generates a sexfoil outline.
 
 #### trefoil(opts)
 
-Builds a trefoil outline.
+Generates a trefoil outline.
 
 ---
 
@@ -146,11 +180,25 @@ Builds a trefoil outline.
 
 Modelling functions for rectangular frames with various corner options.
 
+#### rectangularFrame(opts)
+
+Generates a rectangular frame with the given corner options (interior and exterior).
+
 ---
 
 ### profiles.shapes
 
 Modelling functions for various basic shapes.
+
+---
+
+### profiles.shapes.polygons
+
+Modelling functions for various polygons.
+
+#### octFromDiam(opts)
+
+Generates an octagon from a given diametre.
 
 ---
 
@@ -284,11 +332,11 @@ Modelling functions for 3D arches. Input 2D profiles must be centred at [0, 0, 0
 
 #### onePtArch(opts, geomProfile)
 
-Builds a one-centre (semicircular) arch using a given 2d cross-section profile.
+Generates a one-centre (semicircular) arch using a given 2d cross-section profile.
 
 #### twoPtArch(opts, geomProfile)
 
-Builds a two-centre pointed arch using a given 2d cross-section profile.
+Generates a two-centre pointed arch using a given 2d cross-section profile.
 
 ---
 
@@ -298,23 +346,23 @@ Modelling functions for 3D "foils" (geometric shapes formed by overlapping circl
 
 #### cinquefoil(opts, geomProfile)
 
-Builds a cinquefoil opening using a given 2d cross-section profile.
+Generates a cinquefoil opening using a given 2d cross-section profile.
 
 #### octofoil(opts, geomProfile)
 
-Builds an octofoil opening using a given 2d cross-section profile.
+Generates an octofoil opening using a given 2d cross-section profile.
 
 #### quatrefoil(opts, geomProfile)
 
-Builds a quatrefoil opening using a given 2d cross-section profile.
+Generates a quatrefoil opening using a given 2d cross-section profile.
 
 #### sexfoil(opts, geomProfile)
 
-Builds a sexfoil opening using a given 2d cross-section profile.
+Generates a sexfoil opening using a given 2d cross-section profile.
 
 #### trefoil(opts, geomProfile)
 
-Builds a trefoil opening using a given 2d cross-section profile.
+Generates a trefoil opening using a given 2d cross-section profile.
 
 ---
 
@@ -328,7 +376,7 @@ Various utility helpers, mainly for the final modelling output.
 
 ### utils.colors
 
-A set of named colour presets and their translucent versions. Original color palette from Material Design (`https://www.google.com/design/spec/style/color.html`)
+A set of named colour presets and their translucent versions. References color palette from Material Design (`https://www.google.com/design/spec/style/color.html`)
 
 ---
 
@@ -360,4 +408,4 @@ Removes an element with the given ID from the layout.
 
 ### utils.palette
 
-Collections of colour presets grouped into palettes.
+Collections of colour presets grouped into palettes. References color palette from Material Design (`https://www.google.com/design/spec/style/color.html`)

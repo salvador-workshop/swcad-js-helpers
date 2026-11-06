@@ -15,7 +15,7 @@ const utilsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Utils
+     * Various utility helpers, mainly for the final modelling output.
      * @namespace utils
      * @author R. J. Salvador (Salvador Workshop)
      */

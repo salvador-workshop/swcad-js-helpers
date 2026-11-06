@@ -18,13 +18,13 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Rectangle profiles
+     * Modelling functions for various rectangles.
      * @memberof profiles.shapes
      * @namespace rectangle
      */
     const rectangles = {
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to the Golden ratio.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...
@@ -33,7 +33,7 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
             return createRect({ width, depth, ratio: constants.PHI });
         },
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to a 30-degree right triangle's sides.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...
@@ -42,7 +42,7 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
             return createRect({ width, depth, ratio: 2 });
         },
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to the Silver ratio.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...
@@ -51,7 +51,7 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
             return createRect({ width, depth, ratio: constants.SILVER_RATIO });
         },
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to the Bronze ratio.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...
@@ -60,7 +60,7 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
             return createRect({ width, depth, ratio: constants.BRONZE_RATIO });
         },
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to the Copper ratio.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...
@@ -69,7 +69,7 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
             return createRect({ width, depth, ratio: constants.COPPER_RATIO });
         },
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to the Super-golden ratio.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...
@@ -78,7 +78,7 @@ const rectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
             return createRect({ width, depth, ratio: constants.SUPERGOLDEN_RATIO });
         },
         /**
-         * ...
+         * Generates a rectangle with side lengths corresponding to the Plastic ratio.
          * @memberof profiles.shapes.rectangle
          * @param {object} opts
          * @returns ...

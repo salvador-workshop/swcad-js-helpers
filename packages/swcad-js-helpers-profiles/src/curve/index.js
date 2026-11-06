@@ -42,15 +42,20 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     /**
-     * Curve profiles
+     * Modelling functions for curves.
      * @memberof profiles
      * @namespace curve
      */
     const curves = {
+        /**
+         * Modelling functions for right-angle corner curves.
+         * @memberof profiles.curve
+         * @namespace rightCorner
+         */
         rightCorner: {
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to the Golden ratio.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */
@@ -58,8 +63,8 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 return createRtCornerCurve({ width, depth, ratio: constants.PHI })
             },
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to a 30-degree right triangle's sides.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */
@@ -67,8 +72,8 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 return createRtCornerCurve({ width, depth, ratio: 2 })
             },
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to the Silver ratio.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */
@@ -76,8 +81,8 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 return createRtCornerCurve({ width, depth, ratio: constants.SILVER_RATIO })
             },
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to the Bronze ratio.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */
@@ -85,8 +90,8 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 return createRtCornerCurve({ width, depth, ratio: constants.BRONZE_RATIO })
             },
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to the Copper ratio.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */
@@ -94,8 +99,8 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 return createRtCornerCurve({ width, depth, ratio: constants.COPPER_RATIO })
             },
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to the Super-golden ratio.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */
@@ -103,8 +108,8 @@ const curveBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 return createRtCornerCurve({ width, depth, ratio: constants.SUPERGOLDEN_RATIO })
             },
             /**
-             * ...
-             * @memberof profiles.curve
+             * Generates a right-angle corner curve with axis lengths corresponding to the Plastic ratio.
+             * @memberof profiles.curve.rightCorner
              * @param {object} opts
              * @returns ...
              */

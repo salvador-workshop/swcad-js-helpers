@@ -5,7 +5,7 @@ const foilModule = require('./foil')
 
 const componentsInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     /**
-     * ...
+     * Modelling functions that generate 3D geometries.
      * @namespace components
      * @author R. J. Salvador (Salvador Workshop)
      */
