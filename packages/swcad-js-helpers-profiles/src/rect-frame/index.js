@@ -6,15 +6,15 @@
 //  * @namespace frame
 //  */
 
-const rectangularFrameInit = ({ jscad, swcadJs }) => {
+const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { circle, rectangle } = jscad.primitives
     const { rotate, align, mirror } = jscad.transforms
     const { subtract, union } = jscad.booleans
     const { measureDimensions } = jscad.measurements
     const { TAU } = jscad.maths.constants
 
-    const { shapes, curve } = swcadJs.profiles
     const { position } = swcadJs.calcs
+    const { shapes, curve } = swcadJsHelpers
 
     // Defining corner styles and available tag options
     const cornerStyleTypes = ['round', 'tri', 'rect', 'ellipse', 'cornerBez']

@@ -6,7 +6,7 @@
  * @namespace arch
  */
 
-const archBuilder = ({ jscad, swcadJs }) => {
+const archBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { path2, geom2 } = jscad.geometries
   const { extrudeRotate } = jscad.extrusions
   const { arc, cuboid } = jscad.primitives
@@ -55,4 +55,4 @@ const archBuilder = ({ jscad, swcadJs }) => {
   }
 }
 
-module.exports = { init: archBuilder }
+module.exports = { init: archBuilder2d }

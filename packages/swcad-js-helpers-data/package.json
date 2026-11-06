@@ -1,6 +1,6 @@
 {
   "name": "swcad-js-helpers-data",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "description": "swcad-js-helpers-data",
   "homepage": "",
   "main": "src/index.js",

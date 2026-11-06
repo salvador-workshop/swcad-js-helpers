@@ -9,8 +9,8 @@
 // Original color palette by
 // https://www.google.com/design/spec/style/color.html
 
-const paletteUtils = ({ jscad, swcadJs }) => {
-    const { colors } = swcadJs.utils
+const paletteUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
+    const { colors } = swcadJsHelpers.utils
 
     const palette = {
         /** @memberof utils.palette */

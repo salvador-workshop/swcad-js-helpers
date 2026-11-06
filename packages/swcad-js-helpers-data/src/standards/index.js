@@ -1,14 +1,16 @@
 "use strict"
 
-const inchesToMm = (numIn) => numIn * 25.4
-
 /**
  * ...
  * @memberof data
  * @namespace standards
  */
 
-const standards = ({ jscad }) => {
+const standards = ({ jscad, swcadJs }) => {
+
+    const {
+        math,
+    } = swcadJs.calcs
 
     /**
      * Pegboard standards
@@ -20,22 +22,22 @@ const standards = ({ jscad }) => {
          * Pegboard_Spacing
          * @memberof data.standards.pegboard
          */
-        PEGBOARD_SPACING: inchesToMm(1),
+        PEGBOARD_SPACING: math.inchesToMm(1),
         /**
          * Pegboard_Hole_Diam
          * @memberof data.standards.pegboard
          */
-        PEGBOARD_HOLE_DIAM: inchesToMm(7 / 32),
+        PEGBOARD_HOLE_DIAM: math.inchesToMm(7 / 32),
         /**
          * Micro_Pegboard_Spacing
          * @memberof data.standards.pegboard
          */
-        MICRO_PEGBOARD_SPACING: inchesToMm(1 / 2),
+        MICRO_PEGBOARD_SPACING: math.inchesToMm(1 / 2),
         /**
          * Micro_Pegboard_Hole_Diam
          * @memberof data.standards.pegboard
          */
-        MICRO_PEGBOARD_HOLE_DIAM: inchesToMm(1 / 8),
+        MICRO_PEGBOARD_HOLE_DIAM: math.inchesToMm(1 / 8),
     }
 
     /**
@@ -75,7 +77,7 @@ const standards = ({ jscad }) => {
     }
 
     const interfaceThickness = 1.333333
-    const fitGap = inchesToMm(1 / 128)
+    const fitGap = math.inchesToMm(1 / 128)
 
     const panelThicknessXs = interfaceThickness * 0.5
     const panelThicknessSm = interfaceThickness * 0.75
@@ -176,17 +178,17 @@ const standards = ({ jscad }) => {
          * @memberof data.standards.params
          */
         OBJ_2D_SIZE: [
-            inchesToMm(2),
-            inchesToMm(4),
+            math.inchesToMm(2),
+            math.inchesToMm(4),
         ],
         /**
          * Obj_3d_Size
          * @memberof data.standards.params
          */
         OBJ_3D_SIZE: [
-            inchesToMm(2),
-            inchesToMm(4),
-            inchesToMm(1),
+            math.inchesToMm(2),
+            math.inchesToMm(4),
+            math.inchesToMm(1),
         ],
     }
 

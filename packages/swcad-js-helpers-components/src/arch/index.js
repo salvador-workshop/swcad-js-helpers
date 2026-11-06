@@ -2,11 +2,11 @@
 
 /**
  * Builds circle-based arches. Input 2D profiles must be centred at (0, 0, 0)
- * @memberof models
+ * @memberof components
  * @namespace arch
  */
 
-const archBuilder = ({ jscad, swcadJs }) => {
+const archBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { path2, geom2 } = jscad.geometries
   const { extrudeRotate } = jscad.extrusions
   const { arc, cuboid } = jscad.primitives
@@ -19,7 +19,7 @@ const archBuilder = ({ jscad, swcadJs }) => {
   return {
     /**
      * Builds a one-centre (semicircular) arch.
-     * @memberof models.arch
+     * @memberof components.arch
      * @instance
      * @param {Object} opts 
      * @param {number} opts.arcRadius - arc radius 
@@ -35,7 +35,7 @@ const archBuilder = ({ jscad, swcadJs }) => {
     },
     /**
      * Builds a two-centre pointed arch.
-     * @memberof models.arch
+     * @memberof components.arch
      * @instance
      * @param {Object} opts 
      * @param {number} opts.arcRadius - arc radius 
@@ -75,4 +75,4 @@ const archBuilder = ({ jscad, swcadJs }) => {
   }
 }
 
-module.exports = { init: archBuilder }
+module.exports = { init: archBuilder3d }
