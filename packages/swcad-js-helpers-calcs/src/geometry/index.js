@@ -1,6 +1,6 @@
 "use strict"
 
-const geoTriangleModule = require('./geo-rectangle');
+const geoTriangleModule = require('./geo-triangle');
 
 const geometryInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
 

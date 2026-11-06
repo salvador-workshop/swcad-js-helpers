@@ -3,7 +3,7 @@
 const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
   const { triangle } = jscad.primitives
 
-  const { position } = swcadJsHelpers.calcs
+  const { position, geometry } = swcadJsHelpers.calcs
   const { constants } = swcadJsHelpers.data
 
   //-------------
@@ -15,7 +15,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
       short: base || height / ratio,
       long: height || base * ratio
     }
-    const triOpts = position.triangle.rightTriangleOpts({ ...validOpts })
+    const triOpts = geometry.triangle.rightTriangleOpts({ ...validOpts })
     return triangle(triOpts);
   }
 
@@ -41,7 +41,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @returns ...
      */
     right45: ({ base }) => {
-      const triOpts = position.triangle.rightTriangleOpts({ short: base, long: base })
+      const triOpts = geometry.triangle.rightTriangleOpts({ short: base, long: base })
       return triangle(triOpts);
     },
     /**
