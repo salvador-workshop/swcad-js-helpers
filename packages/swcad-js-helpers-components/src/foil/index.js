@@ -140,7 +140,6 @@ const foilBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const sexfoil = (opts, geomProfile) => {
         return buildFoil3d({ ...opts, numLobes: 6 }, geomProfile);
     }
-    d
     /**
      * Generates an octofoil opening using a given 2d cross-section profile.
      * @memberof components.foil
