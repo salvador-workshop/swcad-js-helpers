@@ -9,17 +9,17 @@
 const foilBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { union } = jscad.booleans
     const { rotate, align } = jscad.transforms
-    const { circle  } = jscad.primitives
+    const { circle } = jscad.primitives
 
     /**
      * Generates a 2D n-foil opening
      * @memberof profiles.foil
-     * @instance
      * @param {Object} opts
      * @param {number} opts.numLobes - number of lobes
      * @param {number} opts.radius - radius of container circle
      * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
      * @access private
+     * @returns ...
      */
     const buildFoil2d = (opts) => {
         const centralAngle = Math.PI * 2 / opts.numLobes;
@@ -63,63 +63,72 @@ const foilBuilder2d = ({ jscad, swcadJs, swcadJsHelpers }) => {
         return union(centreCircle, alignedLobeCircle, ...rotatedLobes);
     }
 
+    /**
+     * Generates a trefoil outline.
+     * @memberof profiles.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @returns ...
+     */
+    const trefoil = (opts) => {
+        return buildFoil2d({ ...opts, numLobes: 3 });
+    }
+
+    /**
+     * Generates a quatrefoil outline.
+     * @memberof profiles.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @returns ...
+     */
+    const quatrefoil = (opts) => {
+        return buildFoil2d({ ...opts, numLobes: 4 });
+    }
+
+    /**
+     * Generates a cinquefoil outline.
+     * @memberof profiles.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @returns ...
+     */
+    const cinquefoil = (opts) => {
+        return buildFoil2d({ ...opts, numLobes: 5 });
+    }
+
+    /**
+     * Generates a sexfoil outline.
+     * @memberof profiles.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @returns ...
+     */
+    const sexfoil = (opts) => {
+        return buildFoil2d({ ...opts, numLobes: 6 });
+    }
+
+    /**
+     * Generates an octofoil outline.
+     * @memberof profiles.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @returns ...
+     */
+    const octofoil = (opts) => {
+        return buildFoil2d({ ...opts, numLobes: 8 });
+    }
+
     return {
-        buildFoil2d,
-        /**
-         * Generates a trefoil outline.
-         * @memberof profiles.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         */
-        trefoil: (opts) => {
-            return buildFoil2d({ ...opts, numLobes: 3 });
-        },
-        /**
-         * Generates a quatrefoil outline.
-         * @memberof profiles.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         */
-        quatrefoil: (opts) => {
-            return buildFoil2d({ ...opts, numLobes: 4 });
-        },
-        /**
-         * Generates a cinquefoil outline.
-         * @memberof profiles.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         */
-        cinquefoil: (opts) => {
-            return buildFoil2d({ ...opts, numLobes: 5 });
-        },
-        /**
-         * Generates a sexfoil outline.
-         * @memberof profiles.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         */
-        sexfoil: (opts) => {
-            return buildFoil2d({ ...opts, numLobes: 6 });
-        },
-        /**
-         * Generates an octofoil outline.
-         * @memberof profiles.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         */
-        octofoil: (opts) => {
-            return buildFoil2d({ ...opts, numLobes: 8 });
-        },
+        trefoil,
+        quatrefoil,
+        cinquefoil,
+        sexfoil,
+        octofoil,
     }
 }
 

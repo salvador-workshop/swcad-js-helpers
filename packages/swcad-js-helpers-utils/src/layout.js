@@ -194,6 +194,7 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {object} opts
      * @instance
      * @memberof utils.layout
+     * @returns ...
      */
     const linearLayout = ({ layoutOpts }) => {
         const layoutContent = [];
@@ -252,6 +253,7 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {object} opts
      * @instance
      * @memberof utils.layout
+     * @returns ...
      */
     const gridLayout = ({ layoutOpts }) => {
         const gridSize = math.factorize(layoutElements.size);
@@ -313,8 +315,12 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
          * @param {string} opts.desc 
          * @param {string[]} opts.tags 
          * @param {Object} opts.layoutOpts 
-         * @param {number[]} opts.layoutOpts.minSize -- [x,y,z] showing minimum size for element layout
-         * @param {boolean} opts.layoutOpts.is2D -- 
+         * @param {number} opts.layoutOpts.layoutMargin
+         * @param {number} opts.layoutOpts.layoutSpace
+         * @param {number} opts.layoutOpts.noFrame
+         * @param {boolean} opts.layoutOpts.is2D
+         * @param {number} opts.layoutOpts.column
+         * @param {number[]} opts.layoutOpts.relativeTo
          * @param {Object} geom
          * @memberof utils.layout
          * @instance

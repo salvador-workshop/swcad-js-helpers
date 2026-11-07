@@ -1,6 +1,8 @@
 # swcad-js-helpers
 
-...
+Various helper functions for the SWCAD-JS sytem.
+
+Also some useful prototypes that may eventually be "promoted" to the main library.
 
 ---
 
@@ -100,6 +102,8 @@ Modelling functions that generate 2D geometries.
 
 Modelling functions for 2D arches.
 
+![swcad-js helpers demo - 2d arch](./static/img/helpers-profiles-arch.jpg "swcad-js helpers demo - 2d arch")
+
 #### onePtArch(opts)
 
 Generates a one-centre (semicircular) arch.
@@ -154,6 +158,8 @@ Generates a right-angle corner curve with axis lengths corresponding to the Supe
 
 Modelling functions for 2D "foils" (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc.
 
+![swcad-js helpers demo - 2d foil](./static/img/helpers-profiles-foil.jpg "swcad-js helpers demo - 2d foil")
+
 #### cinquefoil(opts)
 
 Generates a cinquefoil outline.
@@ -180,6 +186,8 @@ Generates a trefoil outline.
 
 Modelling functions for rectangular frames with various corner options.
 
+![swcad-js helpers demo - rectangular frame](./static/img/helpers-profiles-frame-rect.jpg "swcad-js helpers demo - rectangular frame")
+
 #### rectangularFrame(opts)
 
 Generates a rectangular frame with the given corner options (interior and exterior).
@@ -205,6 +213,8 @@ Generates an octagon from a given diametre.
 ### profiles.shapes.ellipse
 
 Modelling functions for various ellipses.
+
+![swcad-js helpers demo - 2d ellipse](./static/img/helpers-profiles-shapes-ellipse.png "swcad-js helpers demo - 2d ellipse")
 
 #### bronze(opts)
 
@@ -240,6 +250,8 @@ Generates an ellipse with axis lengths corresponding to the Super-golden ratio.
 
 Modelling functions for various rectangles.
 
+![swcad-js helpers demo - 2d rectangle](./static/img/helpers-profiles-shapes-rectangle.png "swcad-js helpers demo - 2d rectangle")
+
 #### bronze(opts)
 
 Generates a rectangle with side lengths corresponding to the Bronze ratio.
@@ -274,6 +286,8 @@ Generates a rectangle with side lengths corresponding to the Super-golden ratio.
 
 Modelling functions for various squares.
 
+![swcad-js helpers demo - 2d square](./static/img/helpers-profiles-shapes-square.jpg "swcad-js helpers demo - 2d square")
+
 #### cornerCircNotch(opts)
 
 Square with circular notches at corners.
@@ -287,6 +301,8 @@ Square with circles at corners.
 ### profiles.shapes.triangle
 
 Modelling functions for various triangles.
+
+![swcad-js helpers demo - 2d triangle](./static/img/helpers-profiles-shapes-triangle.png "swcad-js helpers demo - 2d triangle")
 
 #### equilateral(opts)
 
@@ -330,6 +346,8 @@ Modelling functions that generate 3D geometries.
 
 Modelling functions for 3D arches. Input 2D profiles must be centred at [0, 0, 0].
 
+![swcad-js helpers demo - 3d arch](./static/img/helpers-components-arch.jpg "swcad-js helpers demo - 3d arch")
+
 #### onePtArch(opts, geomProfile)
 
 Generates a one-centre (semicircular) arch using a given 2d cross-section profile.
@@ -343,6 +361,8 @@ Generates a two-centre pointed arch using a given 2d cross-section profile.
 ### components.foil
 
 Modelling functions for 3D "foils" (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc. Input 2D profiles must be centred at [0, 0, 0].
+
+![swcad-js helpers demo - 3d foil](./static/img/helpers-components-foil.jpg "swcad-js helpers demo - 3d foil")
 
 #### cinquefoil(opts, geomProfile)
 
@@ -383,6 +403,8 @@ A set of named colour presets and their translucent versions. References color p
 ### utils.layout
 
 Utilities for arranging sets of 2D/3D geometries into various layouts, with additional options for rendering text labels and descriptions.
+
+![swcad-js helpers demo - layout](./static/img/helpers-layout.jpg "swcad-js helpers demo - layout")
 
 #### addToLayout(opts, geom)
 
