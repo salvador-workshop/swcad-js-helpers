@@ -13,10 +13,10 @@ const squareInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     /**
      * Square with circular notches at corners.
      * @memberof profiles.shapes.square
-     * @instance
      * @param {Object} opts 
      * @param {number} opts.sqLength - side length for bounding square 
      * @param {number} opts.notchRadius - radius of circular notch
+     * @returns ...
      */
     cornerCircNotch: (opts) => {
       // TODO - fix implementation. Everything assumes that cornerRad === sqLen / 4.
@@ -41,10 +41,10 @@ const squareInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     /**
      * Square with circles at corners.
      * @memberof profiles.shapes.square
-     * @instance
      * @param {Object} opts 
      * @param {number} opts.sqLength - side length for bounding square 
      * @param {number} opts.cornerRadius - radius of circular corner
+     * @returns ...
      */
     cornerCircles: (opts) => {
       // TODO - fix implementation. Everything assumes that cornerRad === baseSqLen / 4.

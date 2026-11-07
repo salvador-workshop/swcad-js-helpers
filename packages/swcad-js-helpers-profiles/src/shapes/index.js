@@ -24,9 +24,9 @@ const shapesBuilder = ({ jscad, swcadJs, swcadJsHelpers }) => {
   /**
    * Generates an octagon from a given diametre.
    * @memberof profiles.shapes.polygons
-   * @instance
    * @param {Object} opts 
    * @param {number} opts.sqLength - side length for bounding square 
+   * @returns ...
    */
   const octFromDiam = (opts) => {
     const sqLen = opts.sqLength;

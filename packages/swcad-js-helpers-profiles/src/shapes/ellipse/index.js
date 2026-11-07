@@ -27,6 +27,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to the Golden ratio.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     golden: ({ width, depth }) => {
@@ -36,6 +38,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to a 30-degree right triangle's sides.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     sixtyThirty: ({ width, depth }) => {
@@ -45,6 +49,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to the Silver ratio.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     silver: ({ width, depth }) => {
@@ -54,6 +60,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to the Bronze ratio.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     bronze: ({ width, depth }) => {
@@ -63,6 +71,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to the Copper ratio.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     copper: ({ width, depth }) => {
@@ -72,6 +82,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to the Super-golden ratio.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     superGolden: ({ width, depth }) => {
@@ -81,6 +93,8 @@ const ellipseInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an ellipse with axis lengths corresponding to the Plastic ratio.
      * @memberof profiles.shapes.ellipse
      * @param {object} opts
+     * @param {number} opts.width
+     * @param {number} opts.depth
      * @returns ...
      */
     plastic: ({ width, depth }) => {

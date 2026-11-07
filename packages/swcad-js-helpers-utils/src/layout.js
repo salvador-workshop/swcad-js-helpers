@@ -194,6 +194,7 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {object} opts
      * @instance
      * @memberof utils.layout
+     * @returns ...
      */
     const linearLayout = ({ layoutOpts }) => {
         const layoutContent = [];
@@ -252,6 +253,7 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {object} opts
      * @instance
      * @memberof utils.layout
+     * @returns ...
      */
     const gridLayout = ({ layoutOpts }) => {
         const gridSize = math.factorize(layoutElements.size);

@@ -1,11 +1,5 @@
 "use strict"
 
-/**
- * Modelling functions for 3D "foils" (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc. Input 2D profiles must be centred at [0, 0, 0].
- * @memberof components
- * @namespace foil
- */
-
 const foilBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { union, subtract, scission } = jscad.booleans
     const { rotate, align, translate, mirror } = jscad.transforms
@@ -16,7 +10,6 @@ const foilBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
     /**
      * Generates a 3D n-foil opening using a given 2D cross-section profile.
      * @memberof components.foil
-     * @instance
      * @param {Object} opts
      * @param {number} opts.numLobes - number of lobes
      * @param {number} opts.radius - radius of container circle
@@ -24,6 +17,7 @@ const foilBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
      * @param {geom2.Geom2} geomProfile - 2D cross-section profile
      * @access private
+     * @returns ...
      */
     const buildFoil3d = (opts, geomProfile) => {
         const centralAngle = Math.PI * 2 / opts.numLobes;
@@ -90,73 +84,88 @@ const foilBuilder3d = ({ jscad, swcadJs, swcadJsHelpers }) => {
         return union(cutLobe, ...rotatedLobes)
     }
 
+    /**
+     * Generates a trefoil opening using a given 2d cross-section profile.
+     * @memberof components.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
+     * @param {geom2.Geom2} geomProfile - 2D cross-section profile
+     * @returns ...
+     */
+    const trefoil = (opts, geomProfile) => {
+        return buildFoil3d({ ...opts, numLobes: 3 }, geomProfile);
+    }
+
+    /**
+     * Generates a quatrefoil opening using a given 2d cross-section profile.
+     * @memberof components.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
+     * @param {geom2.Geom2} geomProfile - 2D cross-section profile
+     * @returns ...
+     */
+
+    const quatrefoil = (opts, geomProfile) => {
+        return buildFoil3d({ ...opts, numLobes: 4 }, geomProfile);
+    }
+
+    /**
+     * Generates a cinquefoil opening using a given 2d cross-section profile.
+     * @memberof components.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
+     * @param {geom2.Geom2} geomProfile - 2D cross-section profile
+     * @returns ...
+     */
+    const cinquefoil = (opts, geomProfile) => {
+        return buildFoil3d({ ...opts, numLobes: 5 }, geomProfile);
+    }
+
+    /**
+     * Generates a sexfoil opening using a given 2d cross-section profile.
+     * @memberof components.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
+     * @param {geom2.Geom2} geomProfile - 2D cross-section profile
+     * @returns ...
+     */
+    const sexfoil = (opts, geomProfile) => {
+        return buildFoil3d({ ...opts, numLobes: 6 }, geomProfile);
+    }
+    d
+    /**
+     * Generates an octofoil opening using a given 2d cross-section profile.
+     * @memberof components.foil
+     * @param {Object} opts
+     * @param {number} opts.radius - radius of container circle
+     * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
+     * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
+     * @param {geom2.Geom2} geomProfile - 2D cross-section profile
+     * @returns ...
+     */
+    const octofoil = (opts, geomProfile) => {
+        return buildFoil3d({ ...opts, numLobes: 8 }, geomProfile);
+    }
+
+    /**
+     * Modelling functions for 3D "foils" (geometric shapes formed by overlapping circles) such as trefoils, quatrefoils, cinquefoils, etc. Input 2D profiles must be centred at [0, 0, 0].
+     * @memberof components
+     * @namespace foil
+     */
     return {
-        buildFoil3d,
-        /**
-         * Generates a trefoil opening using a given 2d cross-section profile.
-         * @memberof components.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
-         * @param {geom2.Geom2} geomProfile - 2D cross-section profile
-         */
-        trefoil: (opts, geomProfile) => {
-            return buildFoil3d({ ...opts, numLobes: 3 }, geomProfile);
-        },
-        /**
-         * Generates a quatrefoil opening using a given 2d cross-section profile.
-         * @memberof components.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
-         * @param {geom2.Geom2} geomProfile - 2D cross-section profile
-         */
-        quatrefoil: (opts, geomProfile) => {
-            return buildFoil3d({ ...opts, numLobes: 4 }, geomProfile);
-        },
-        /**
-         * Generates a cinquefoil opening using a given 2d cross-section profile.
-         * @memberof components.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
-         * @param {geom2.Geom2} geomProfile - 2D cross-section profile
-         */
-        cinquefoil: (opts, geomProfile) => {
-            return buildFoil3d({ ...opts, numLobes: 5 }, geomProfile);
-        },
-        /**
-         * Generates a sexfoil opening using a given 2d cross-section profile.
-         * @memberof components.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
-         * @param {geom2.Geom2} geomProfile - 2D cross-section profile
-         */
-        sexfoil: (opts, geomProfile) => {
-            return buildFoil3d({ ...opts, numLobes: 6 }, geomProfile);
-        },
-        /**
-         * Generates an octofoil opening using a given 2d cross-section profile.
-         * @memberof components.foil
-         * @instance
-         * @param {Object} opts
-         * @param {number} opts.radius - radius of container circle
-         * @param {string} opts.lobeRadiusType - "inSlice", "halfRadius", "mean"
-         * @param {boolean} opts.cutCentre - if true, cuts a circular hole in centre of opening
-         * @param {geom2.Geom2} geomProfile - 2D cross-section profile
-         */
-        octofoil: (opts, geomProfile) => {
-            return buildFoil3d({ ...opts, numLobes: 8 }, geomProfile);
-        },
+        trefoil,
+        quatrefoil,
+        cinquefoil,
+        sexfoil,
+        octofoil,
     }
 }
 

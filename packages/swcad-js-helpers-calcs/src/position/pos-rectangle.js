@@ -6,7 +6,7 @@
  * @namespace rectangle
  */
 
-const geoRectangle = ({ jscad, swcadJs }) => {
+const geoRectangleInit = ({ jscad, swcadJs }) => {
     const {
         measureBoundingBox,
     } = jscad.measurements;
@@ -44,4 +44,4 @@ const geoRectangle = ({ jscad, swcadJs }) => {
     }
 }
 
-module.exports = { init: geoRectangle };
+module.exports = { init: geoRectangleInit };

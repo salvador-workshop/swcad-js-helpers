@@ -29,6 +29,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates an equilateral triangle.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
      * @returns ...
      */
     equilateral: ({ base }) => {
@@ -38,6 +39,7 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates a right triangle with a 45-degree angle.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
      * @returns ...
      */
     right45: ({ base }) => {
@@ -48,6 +50,8 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates a right triangle with a 30-degree angle.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
+     * @param {number} opts.height
      * @returns ...
      */
     right30: ({ base, height }) => {
@@ -57,6 +61,8 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates a right triangle with side lengths corresponding to the Golden ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
+     * @param {number} opts.height
      * @returns ...
      */
     rightGolden: ({ base, height }) => {
@@ -66,6 +72,8 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates a right triangle with side lengths corresponding to the Silver ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
+     * @param {number} opts.height
      * @returns ...
      */
     rightSilver: ({ base, height }) => {
@@ -75,6 +83,8 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates a right triangle with side lengths corresponding to the Bronze ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
+     * @param {number} opts.height
      * @returns ...
      */
     rightBronze: ({ base, height }) => {
@@ -84,6 +94,8 @@ const triangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * Generates a right triangle with side lengths corresponding to the Copper ratio.
      * @memberof profiles.shapes.triangle
      * @param {object} opts
+     * @param {number} opts.base
+     * @param {number} opts.height
      * @returns ...
      */
     rightCopper: ({ base, height }) => {
