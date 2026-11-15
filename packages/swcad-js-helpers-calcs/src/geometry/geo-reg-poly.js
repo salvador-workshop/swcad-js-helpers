@@ -6,7 +6,7 @@
  * @memberof calcs.geometry
  */
 
-const geoRegPoly = ({ jscad, swcadJs }) => {
+const geoRegPoly = ({ jscad, swcadJs, swcadJsHelpers }) => {
     return {
         /**
          * Calculates side length from apothem and # of sides.

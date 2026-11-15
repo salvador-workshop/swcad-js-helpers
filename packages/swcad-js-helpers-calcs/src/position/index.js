@@ -67,7 +67,7 @@ const positionInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
      * @memberof calcs
      */
     return {
-        rectangle: posRectangle.init({ jscad, swcadJs }),
+        rectangle: posRectangle.init({ jscad, swcadJs, swcadJsHelpers }),
         measure,
         getGeomCoords,
         findLongAxis,
