@@ -93,28 +93,28 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 fontSize: 3.5,
                 charLineWidth: 1,
                 ...frameOpts,
-            });
+            })[0];
 
             const subtitleText = text2d.basicText({
                 message: subtitle,
                 fontSize: 3,
                 charLineWidth: 0.75,
                 ...frameOpts,
-            });;
+            })[0];
 
             const data1Text = text2d.basicText({
                 message: data1,
                 fontSize: 3,
                 charLineWidth: 0.75,
                 ...frameOpts,
-            });;
+            })[0];
 
             const data2Text = text2d.basicText({
                 message: data2,
                 fontSize: 3,
                 charLineWidth: 0.75,
                 ...frameOpts,
-            });;
+            })[0];
 
             const frameSpacer = frameWidth * 1.25;
             const basicFrame = subtract(
@@ -152,28 +152,28 @@ const layoutUtils = ({ jscad, swcadJs, swcadJsHelpers }) => {
             fontSize: 3.5,
             charLineWidth: 1,
             ...frameOpts,
-        });
+        })[0];
 
         const subtitleText = text3d.textPanel({
             message: subtitle,
             fontSize: 3,
             charLineWidth: 0.75,
             ...frameOpts,
-        });
+        })[0];
 
         const data1Text = text3d.textPanel({
             message: data1,
             fontSize: 3,
             charLineWidth: 0.75,
             ...frameOpts,
-        });
+        })[0];
 
         const data2Text = text3d.textPanel({
             message: data2,
             fontSize: 3,
             charLineWidth: 0.75,
             ...frameOpts,
-        });
+        })[0];
 
         const basicFrame = subtract(
             cuboid({ size: [layoutDims[0], layoutDims[1], frameWidth] }),

@@ -1,6 +1,6 @@
 "use strict"
 
-const geoTriangleInit = ({ jscad, swcadJs }) => {
+const geoTriangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     const { TAU } = jscad.maths.constants
 
     /**
