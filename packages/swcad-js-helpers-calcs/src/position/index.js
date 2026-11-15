@@ -61,16 +61,27 @@ const positionInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
         return axes[maxDimIdx]
     }
 
+    const setupCalcsPosition = {
+        measure,
+        getGeomCoords,
+        findLongAxis,
+    }
+
+    const preHelpers = {
+        ...swcadJsHelpers,
+        calcs: {
+            position: setupCalcsPosition
+        }
+    }
+
     /**
      * Functions leveraging JSCAD to get position data or move 2D/3D geometries.
      * @namespace position
      * @memberof calcs
      */
     return {
-        rectangle: posRectangle.init({ jscad, swcadJs, swcadJsHelpers }),
-        measure,
-        getGeomCoords,
-        findLongAxis,
+        ...setupCalcsPosition,
+        rectangle: posRectangle.init({ jscad, swcadJs, swcadJsHelpers: preHelpers }),
     }
 }
 

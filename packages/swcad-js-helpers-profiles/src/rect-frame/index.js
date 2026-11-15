@@ -380,7 +380,7 @@ const rectangularFrameInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
                 frameWidth * 2 + size[0],
                 frameWidth * 2 + size[1],
             ],
-            longAxis: cornerOpts.longAxis || basePosition.findLongAxis(size)
+            longAxis: cornerOpts.longAxis || position.findLongAxis(size)
         }
 
         const iCornOpts = { ...cornerOpts, longAxis: specs.longAxis }

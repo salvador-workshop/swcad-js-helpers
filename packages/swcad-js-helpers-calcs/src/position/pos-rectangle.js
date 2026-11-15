@@ -7,11 +7,7 @@
  */
 
 const geoRectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
-    const {
-        measureBoundingBox,
-    } = jscad.measurements;
-
-    const { position } = swcadJs.calcs
+    const { position } = swcadJsHelpers.calcs
 
     /**
      * Gets 3D bounding coordinates for a given rectangle.
@@ -40,6 +36,7 @@ const geoRectangleInit = ({ jscad, swcadJs, swcadJsHelpers }) => {
     }
 
     return {
+        getRectangleCoords,
         getRectangleCorners,
     }
 }
