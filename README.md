@@ -4,89 +4,17 @@ Various helper functions for the SWCAD-JS sytem.
 
 Also some useful prototypes that may eventually be "promoted" to the main library.
 
+Main library repo:  
+<https://github.com/salvador-workshop/swcad-js>  
+
+Web viewer repo:  
+<https://github.com/salvador-workshop/sw-jscad-viewer>
+
 ---
 
 ## SWCAD-JS Helpers API
 
 SWCAD-JS Helper functions and utilities.
-
----
-
-<br/>
-
-### DATA
-
-Mostly math constants and common dimensions/options.
-
----
-
-### data.constants
-
-Numeric constants and ratios.
-
----
-
-### data.functions
-
-Functions that support data initialization and access.
-
-#### camelCase(str)
-
-Converts the given string to camel case, using spaces/whitespace as delimiters.
-
-#### constantToCamelCase(str)
-
-Converts constant-style strings (capitals w/ underscores) to camel case.
-
----
-
-### data.standards
-
-Dimensions and options used throughout the SWCAD-JS system.
-
----
-
-<br/>
-
-### CALCS
-
-Math calculations and basic JSCAD operations.
-
----
-
-### calcs.position
-
-Functions leveraging JSCAD to get position data or move 2D/3D geometries.
-
----
-
-### calcs.position.rectangle
-
-Calculations around rectangle positions.
-
-#### getRectangleCoords(rectGeom)
-
-Gets 3D bounding coordinates for a given rectangle.
-
-#### getRectangleCorners(rectGeom)
-
-Gets 3D bounding corners for a given rectangle.
-
----
-
-### calcs.geometry
-
-Geometric calculations in 2D/3D space.
-
----
-
-### calcs.geometry.triangle
-
-Geometric calculations for triangles.
-
-#### rightTriangleOpts(opts)
-
-Sets up triangle creation from the given parameters. If valid, returns triangle creation strategy (AAS, ASA, SAS, etc) and values for `jscad.primitives.triangle()`. If invalid, returns `null`.
 
 ---
 
